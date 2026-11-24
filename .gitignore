@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+tmp/
+CVs/
+projects_screen_shot/
+thmanyah fonts/
+public/admin/config.yml
+public/admin/setup.json
+public/media/responsive/
+src/generated/media.json

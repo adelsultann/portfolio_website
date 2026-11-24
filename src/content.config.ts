@@ -1,0 +1,16 @@
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { glob } from 'astro/loaders';
+const bi=z.object({en:z.string().default(''),ar:z.string().default('')}).default({en:'',ar:''});
+const requiredBi=z.object({en:z.string().min(1),ar:z.string().min(1)});
+const safe=z.string().refine(v=>!v||(/^\/(?!\/)/.test(v)&&!v.includes('..'))||/^https:\/\//.test(v),'Use a local /media/ path or HTTPS URL').default('');
+const status=z.enum(['draft','published']);
+const base={order:z.number().int().min(0),status};
+const slug=z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+const media=z.object({order:z.number().int().min(0).default(100),type:z.enum(['image','video']),src:safe,alt:requiredBi,caption:bi,poster:safe.default(''),width:z.number().int().positive(),height:z.number().int().positive()}).refine(m=>m.type!=='video'||!!m.poster,'Videos require a poster image');
+const projects=defineCollection({loader:glob({pattern:'*.json',base:'src/content/projects'}),schema:z.object({...base,slug,title:requiredBi,summary:requiredBi,category:z.string().min(1),engagement:z.enum(['personal product','freelance','employment','other']),company:z.string().default(''),role:requiredBi,timeframe:bi,problem:requiredBi,solution:requiredBi,contribution:requiredBi,implementation:requiredBi,outcomes:requiredBi,tags:z.array(z.string()),cover:safe,coverAlt:requiredBi,gallery:z.array(media).default([]),liveUrl:safe,repoUrl:safe,pdf:safe,featured:z.boolean().default(false),seoTitle:bi,seoDescription:bi})});
+const experience=defineCollection({loader:glob({pattern:'*.json',base:'src/content/experience'}),schema:z.object({...base,slug,role:requiredBi,company:z.string().min(1),type:z.enum(['employment','freelance','contract','founder']),location:bi,start:z.string().regex(/^\d{4}-\d{2}$/),end:z.string().default(''),present:z.boolean(),summary:z.object({en:z.union([z.string().min(1),z.array(z.string().min(1)).min(1)]),ar:z.union([z.string().min(1),z.array(z.string().min(1)).min(1)])}),outcomes:z.object({en:z.array(z.string()),ar:z.array(z.string())}),tags:z.array(z.string()),companyUrl:safe,relatedProjects:z.array(z.string()).default([])})});
+const certifications=defineCollection({loader:glob({pattern:'*.json',base:'src/content/certifications'}),schema:z.object({...base,slug,name:requiredBi,issuer:z.string().min(1),issued:z.string().default(''),expires:z.string().default(''),credentialId:z.string().default(''),verificationUrl:safe,badge:safe})});
+const profile=defineCollection({loader:glob({pattern:'*.json',base:'src/content/profile'}),schema:z.object({name:requiredBi,headline:requiredBi,intro:requiredBi,about:requiredBi,location:requiredBi,email:z.email(),github:safe,linkedin:safe,cv:safe,contact:requiredBi,contactBody:requiredBi,skills:z.array(z.object({title:requiredBi,items:z.array(z.string())}))})});
+const settings=defineCollection({loader:glob({pattern:'*.json',base:'src/content/settings'}),schema:z.object({domain:z.url(),description:requiredBi,categories:z.array(z.object({id:slug,label:requiredBi})),projectOrder:z.array(z.string()).default([]),ogImage:safe})});
+export const collections={projects,experience,certifications,profile,settings};

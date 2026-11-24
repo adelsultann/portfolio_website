@@ -1,0 +1,46 @@
+{
+  "outcomes": {
+    "en": [],
+    "ar": []
+  },
+  "start": "2025-03",
+  "relatedProjects": [
+    "lahant"
+  ],
+  "summary": {
+    "en": [
+      "Developed and maintained mobile applications and operational systems for a FoodTech platform serving 10,000+ customers and processing approximately 100 orders daily.",
+      "Architected and built the store application using Flutter and Dart, implementing real-time order lifecycle management, pickup readiness updates, customer arrival notifications, and Firebase integrations.",
+      "Developed an operations dashboard using React and TypeScript, featuring role-based access control and automated Excel reporting, saving an estimated 5+ hours of manual work per week.",
+      "Collaborated across engineering, operations, product development, and analytics to improve operational workflows and the end-to-end customer pickup experience."
+    ],
+    "ar": [
+      "تطوير ودعم تطبيقات الجوال والأنظمة التشغيلية لمنصة تقنية في قطاع الأغذية، تخدم أكثر من 10,000 عميل وتعالج نحو 100 طلب يوميًا.",
+      "تصميم وتطوير تطبيق المتاجر باستخدام Flutter وDart، مع بناء نظام لإدارة دورة حياة الطلبات لحظيًا، وإشعارات جاهزية الطلبات ووصول العملاء، والتكامل مع خدمات Firebase.",
+      "تطوير لوحة تحكم تشغيلية باستخدام React وTypeScript، تتضمن صلاحيات وصول حسب الأدوار وتصدير تقارير Excel تلقائيًا، مما ساهم في توفير ما يُقدّر بأكثر من 5 ساعات عمل يدوي أسبوعيًا.",
+      "المساهمة في القرارات التقنية وتطوير المنتج وتحليل الأداء وتحسين العمليات التشغيلية، بهدف تقديم تجربة أكثر كفاءة من إنشاء الطلب حتى استلامه."
+    ]
+  },
+  "slug": "lahant",
+  "order": 0,
+  "companyUrl": "https://www.lahent.sa/ar",
+  "status": "published",
+  "location": {
+    "en": "",
+    "ar": ""
+  },
+  "role": {
+    "en": "Product Engineer",
+    "ar": "مهندس منتجات"
+  },
+  "tags": [
+    "Flutter",
+    "Firebase",
+    "React",
+    "TypeScript"
+  ],
+  "type": "employment",
+  "present": true,
+  "end": "",
+  "company": "LaHant"
+}

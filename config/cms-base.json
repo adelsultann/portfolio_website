@@ -1,0 +1,1175 @@
+{
+  "backend": {
+    "name": "git-gateway"
+  },
+  "publish_mode": "editorial_workflow",
+  "site_url": "https://adelalsultan.com",
+  "display_url": "https://adelalsultan.com",
+  "logo_url": "/favicon.svg",
+  "media_folder": "public/media/uploads",
+  "public_folder": "/media/uploads",
+  "media_libraries": {
+    "default": {
+      "config": {
+        "max_file_size": 20971520
+      }
+    }
+  },
+  "collections": [
+    {
+      "name": "profile",
+      "label": "Profile & About",
+      "files": [
+        {
+          "name": "main",
+          "label": "Profile & About",
+          "file": "src/content/profile/main.json",
+          "fields": [
+            {
+              "name": "name",
+              "label": "Name",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "string",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "headline",
+              "label": "Professional headline",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "text",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "intro",
+              "label": "Short introduction",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "text",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "about",
+              "label": "About",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "text",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "location",
+              "label": "Location",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "string",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "email",
+              "label": "Contact email",
+              "widget": "string",
+              "pattern": [
+                "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$",
+                "Enter a valid email"
+              ]
+            },
+            {
+              "name": "github",
+              "label": "GitHub URL",
+              "widget": "string",
+              "required": false,
+              "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
+            },
+            {
+              "name": "linkedin",
+              "label": "LinkedIn URL",
+              "widget": "string",
+              "required": false,
+              "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
+            },
+            {
+              "name": "cv",
+              "label": "Public CV",
+              "widget": "file",
+              "required": false,
+              "hint": "Replace with your public PDF CV. Never upload the private master evidence resume."
+            },
+            {
+              "name": "contact",
+              "label": "Contact heading",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "string",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "contactBody",
+              "label": "Contact introduction",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "text",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "skills",
+              "label": "Skill groups",
+              "widget": "list",
+              "collapsed": true,
+              "summary": "{{fields.title.en}}",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Group name",
+                  "widget": "object",
+                  "collapsed": true,
+                  "summary": "{{fields.en}}",
+                  "hint": "",
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": true
+                    },
+                    {
+                      "name": "ar",
+                      "label": "العربية / Arabic",
+                      "widget": "string",
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "name": "items",
+                  "label": "Skills",
+                  "widget": "list"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "experience",
+      "label": "Experience",
+      "folder": "src/content/experience",
+      "format": "json",
+      "extension": "json",
+      "create": true,
+      "delete": true,
+      "identifier_field": "slug",
+      "slug": "{{slug}}",
+      "summary": "{{role.en}} · {{company}}",
+      "sortable_fields": [
+        "order"
+      ],
+      "fields": [
+        {
+          "name": "slug",
+          "label": "Entry identifier",
+          "widget": "string",
+          "pattern": [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Use lowercase letters, numbers and hyphens"
+          ]
+        },
+        {
+          "name": "role",
+          "label": "Role / title",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "company",
+          "label": "Company",
+          "widget": "string"
+        },
+        {
+          "name": "type",
+          "label": "Employment type",
+          "widget": "select",
+          "options": [
+            "employment",
+            "freelance",
+            "contract",
+            "founder"
+          ]
+        },
+        {
+          "name": "location",
+          "label": "Location",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "start",
+          "label": "Start date (YYYY-MM)",
+          "widget": "string",
+          "pattern": [
+            "^\\d{4}-\\d{2}$",
+            "Use YYYY-MM, e.g. 2025-03"
+          ]
+        },
+        {
+          "name": "end",
+          "label": "End date (YYYY-MM)",
+          "widget": "string",
+          "required": false,
+          "hint": "Leave blank for a current role."
+        },
+        {
+          "name": "present",
+          "label": "I currently work here",
+          "widget": "boolean",
+          "default": false
+        },
+        {
+          "name": "summary",
+          "label": "Role summary — bullet points",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "Add and reorder your role highlights",
+          "hint": "Each item becomes one bullet on the homepage. No hyphens or special formatting needed.",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "list",
+              "required": true,
+              "field": {
+                "name": "point",
+                "label": "Bullet point",
+                "widget": "text"
+              },
+              "label_singular": "bullet point",
+              "allow_reorder": true,
+              "default": [],
+              "min": 1
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "list",
+              "required": true,
+              "field": {
+                "name": "point",
+                "label": "Bullet point",
+                "widget": "text"
+              },
+              "label_singular": "bullet point",
+              "allow_reorder": true,
+              "default": [],
+              "min": 1
+            }
+          ]
+        },
+        {
+          "name": "outcomes",
+          "label": "Responsibilities and outcomes",
+          "widget": "object",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English bullet points",
+              "widget": "list"
+            },
+            {
+              "name": "ar",
+              "label": "النقاط بالعربية / Arabic",
+              "widget": "list"
+            }
+          ]
+        },
+        {
+          "name": "tags",
+          "label": "Technologies / skills",
+          "widget": "list"
+        },
+        {
+          "name": "companyUrl",
+          "label": "Company URL",
+          "widget": "string",
+          "required": false,
+          "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
+        },
+        {
+          "name": "relatedProjects",
+          "label": "Related projects",
+          "widget": "relation",
+          "collection": "projects",
+          "search_fields": [
+            "title.en",
+            "slug"
+          ],
+          "value_field": "slug",
+          "display_fields": [
+            "title.en"
+          ],
+          "multiple": true,
+          "required": false,
+          "default": []
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "widget": "number",
+          "default": 100,
+          "min": 0,
+          "value_type": "int",
+          "hint": "Lower numbers appear first. Use the number controls to move an entry up or down: 10, 20, 30…"
+        },
+        {
+          "name": "status",
+          "label": "Public visibility",
+          "widget": "select",
+          "options": [
+            {
+              "label": "Draft — hidden from public pages",
+              "value": "draft"
+            },
+            {
+              "label": "Published — included after deployment",
+              "value": "published"
+            }
+          ],
+          "default": "draft",
+          "hint": "Set Published when ready. Then use Publish in the workflow. Your change is live only after Cloudflare finishes deploying."
+        }
+      ],
+      "preview_path": "en/"
+    },
+    {
+      "name": "projects",
+      "label": "Projects",
+      "folder": "src/content/projects",
+      "format": "json",
+      "extension": "json",
+      "create": true,
+      "delete": true,
+      "identifier_field": "slug",
+      "slug": "{{slug}}",
+      "summary": "{{title.en}}",
+      "sortable_fields": [
+        "order"
+      ],
+      "fields": [
+        {
+          "name": "slug",
+          "label": "Permanent URL name",
+          "widget": "string",
+          "pattern": [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Lowercase letters, numbers and hyphens only"
+          ],
+          "hint": "Set once. Changing this after publication breaks existing links."
+        },
+        {
+          "name": "title",
+          "label": "Project title",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "summary",
+          "label": "Short summary",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "text",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "category",
+          "label": "Category",
+          "widget": "relation",
+          "collection": "settings",
+          "file": "main",
+          "search_fields": [
+            "categories.*.label.en",
+            "categories.*.id"
+          ],
+          "value_field": "categories.*.id",
+          "display_fields": [
+            "categories.*.label.en"
+          ]
+        },
+        {
+          "name": "engagement",
+          "label": "Engagement type",
+          "widget": "select",
+          "options": [
+            "personal product",
+            "freelance",
+            "employment",
+            "other"
+          ]
+        },
+        {
+          "name": "company",
+          "label": "Client or company",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "role",
+          "label": "My role",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "timeframe",
+          "label": "Timeframe",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "problem",
+          "label": "Problem",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "text",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "solution",
+          "label": "Solution",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "text",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "contribution",
+          "label": "My specific contribution",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "text",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "implementation",
+          "label": "Implementation supported by evidence",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "text",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "outcomes",
+          "label": "Outcomes and metrics",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "Preserve approximately / estimated qualifiers. Clicks are not sales; platform metrics are not individual attribution.",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "text",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "tags",
+          "label": "Technologies / capabilities",
+          "widget": "list"
+        },
+        {
+          "name": "cover",
+          "label": "Cover image",
+          "widget": "image"
+        },
+        {
+          "name": "coverAlt",
+          "label": "Cover image description",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "gallery",
+          "label": "Images and videos",
+          "widget": "list",
+          "fields": [
+            {
+              "name": "type",
+              "label": "Media type",
+              "widget": "select",
+              "options": [
+                "image",
+                "video"
+              ],
+              "default": "image"
+            },
+            {
+              "name": "src",
+              "label": "Upload image or video",
+              "widget": "file",
+              "hint": "Only upload media cleared for public viewing. Maximum 20 MiB per file. Larger video: use your authenticated Cloudinary library."
+            },
+            {
+              "name": "alt",
+              "label": "Accessible description",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "string",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "caption",
+              "label": "Caption",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": false
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "text",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "poster",
+              "label": "Video poster image",
+              "widget": "image",
+              "required": false,
+              "hint": "Required for video. Upload a still image."
+            },
+            {
+              "name": "width",
+              "label": "Original width (pixels)",
+              "widget": "number",
+              "default": 1280,
+              "min": 1,
+              "value_type": "int"
+            },
+            {
+              "name": "height",
+              "label": "Original height (pixels)",
+              "widget": "number",
+              "default": 720,
+              "min": 1,
+              "value_type": "int"
+            },
+            {
+              "name": "order",
+              "label": "Media display order",
+              "widget": "number",
+              "value_type": "int",
+              "min": 0,
+              "default": 100,
+              "required": false,
+              "hint": "Optional keyboard alternative to dragging: lower numbers appear first. Equal numbers preserve drag order."
+            }
+          ],
+          "collapsed": true,
+          "summary": "{{fields.type}} · {{fields.alt.en}}",
+          "hint": "Drag entries to reorder. Image descriptions are read by screen readers.",
+          "default": []
+        },
+        {
+          "name": "liveUrl",
+          "label": "Live product URL",
+          "widget": "string",
+          "required": false,
+          "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
+        },
+        {
+          "name": "repoUrl",
+          "label": "Source repository URL",
+          "widget": "string",
+          "required": false,
+          "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
+        },
+        {
+          "name": "pdf",
+          "label": "Public supporting PDF",
+          "widget": "file",
+          "required": false,
+          "hint": "Upload only a privacy-reviewed public PDF."
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "widget": "number",
+          "default": 100,
+          "min": 0,
+          "value_type": "int",
+          "hint": "Lower numbers appear first. Use the number controls to move an entry up or down: 10, 20, 30…"
+        },
+        {
+          "name": "status",
+          "label": "Public visibility",
+          "widget": "select",
+          "options": [
+            {
+              "label": "Draft — hidden from public pages",
+              "value": "draft"
+            },
+            {
+              "label": "Published — included after deployment",
+              "value": "published"
+            }
+          ],
+          "default": "draft",
+          "hint": "Set Published when ready. Then use Publish in the workflow. Your change is live only after Cloudflare finishes deploying."
+        },
+        {
+          "name": "seoTitle",
+          "label": "Search title",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "seoDescription",
+          "label": "Search description",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "text",
+              "required": false
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "text",
+              "required": false
+            }
+          ]
+        }
+      ],
+      "preview_path": "en/projects/{{slug}}/"
+    },
+    {
+      "name": "certifications",
+      "label": "Certifications",
+      "folder": "src/content/certifications",
+      "format": "json",
+      "extension": "json",
+      "create": true,
+      "delete": true,
+      "identifier_field": "slug",
+      "slug": "{{slug}}",
+      "summary": "{{name.en}}",
+      "sortable_fields": [
+        "order"
+      ],
+      "fields": [
+        {
+          "name": "slug",
+          "label": "Short entry name",
+          "widget": "string",
+          "hint": "A permanent short name, for example pmp or ecba.",
+          "pattern": [
+            "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "Use lowercase letters, numbers and hyphens"
+          ]
+        },
+        {
+          "name": "name",
+          "label": "Certification name",
+          "widget": "object",
+          "collapsed": true,
+          "summary": "{{fields.en}}",
+          "hint": "",
+          "fields": [
+            {
+              "name": "en",
+              "label": "English",
+              "widget": "string",
+              "required": true
+            },
+            {
+              "name": "ar",
+              "label": "العربية / Arabic",
+              "widget": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "issuer",
+          "label": "Issuing organization",
+          "widget": "string"
+        },
+        {
+          "name": "issued",
+          "label": "Issue date",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "expires",
+          "label": "Expiry date",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "credentialId",
+          "label": "Credential ID",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "verificationUrl",
+          "label": "Verification URL",
+          "widget": "string",
+          "required": false,
+          "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
+        },
+        {
+          "name": "badge",
+          "label": "Badge image",
+          "widget": "image",
+          "required": false
+        },
+        {
+          "name": "order",
+          "label": "Display order",
+          "widget": "number",
+          "default": 100,
+          "min": 0,
+          "value_type": "int",
+          "hint": "Lower numbers appear first. Use the number controls to move an entry up or down: 10, 20, 30…"
+        },
+        {
+          "name": "status",
+          "label": "Public visibility",
+          "widget": "select",
+          "options": [
+            {
+              "label": "Draft — hidden from public pages",
+              "value": "draft"
+            },
+            {
+              "label": "Published — included after deployment",
+              "value": "published"
+            }
+          ],
+          "default": "draft",
+          "hint": "Set Published when ready. Then use Publish in the workflow. Your change is live only after Cloudflare finishes deploying."
+        }
+      ],
+      "preview_path": "en/"
+    },
+    {
+      "name": "settings",
+      "label": "Site Settings",
+      "files": [
+        {
+          "name": "main",
+          "label": "Site Settings",
+          "file": "src/content/settings/main.json",
+          "fields": [
+            {
+              "name": "domain",
+              "label": "Production domain",
+              "widget": "string",
+              "hint": "The canonical domain. Change only when moving domains."
+            },
+            {
+              "name": "description",
+              "label": "Default search description",
+              "widget": "object",
+              "collapsed": true,
+              "summary": "{{fields.en}}",
+              "hint": "",
+              "fields": [
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "text",
+                  "required": true
+                },
+                {
+                  "name": "ar",
+                  "label": "العربية / Arabic",
+                  "widget": "text",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "categories",
+              "label": "Project categories",
+              "widget": "list",
+              "collapsed": true,
+              "summary": "{{fields.label.en}}",
+              "fields": [
+                {
+                  "name": "id",
+                  "label": "Permanent category ID",
+                  "widget": "string"
+                },
+                {
+                  "name": "label",
+                  "label": "Category label",
+                  "widget": "object",
+                  "collapsed": true,
+                  "summary": "{{fields.en}}",
+                  "hint": "",
+                  "fields": [
+                    {
+                      "name": "en",
+                      "label": "English",
+                      "widget": "string",
+                      "required": true
+                    },
+                    {
+                      "name": "ar",
+                      "label": "العربية / Arabic",
+                      "widget": "string",
+                      "required": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "projectOrder",
+              "label": "Project ordering",
+              "widget": "list",
+              "hint": "Drag projects to order them. Projects not listed follow their display-order number.",
+              "field": {
+                "name": "project",
+                "label": "Project",
+                "widget": "relation",
+                "collection": "projects",
+                "search_fields": [
+                  "title.en",
+                  "slug"
+                ],
+                "value_field": "slug",
+                "display_fields": [
+                  "title.en"
+                ]
+              },
+              "required": false,
+              "default": []
+            },
+            {
+              "name": "ogImage",
+              "label": "Social sharing image",
+              "widget": "image"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

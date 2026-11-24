@@ -1,0 +1,15 @@
+{
+  "badge": "/media/uploads/data-analyst-cert.png",
+  "name": {
+    "en": "Entry Certificate in Business Analysis (ECBA)",
+    "ar": "Entry Certificate in Business Analysis (ECBA)"
+  },
+  "slug": "ecba",
+  "issued": "",
+  "order": 10,
+  "credentialId": "",
+  "status": "published",
+  "verificationUrl": "",
+  "expires": "",
+  "issuer": "IIBA"
+}

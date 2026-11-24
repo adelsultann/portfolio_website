@@ -1,0 +1,10 @@
+---
+import {imageInfo} from '../lib/media';
+import {labels,engagementLabels,type Lang} from '../lib/content';
+import type {CollectionEntry} from 'astro:content';
+interface Props{project:CollectionEntry<'projects'>;lang:Lang;heading?:'h2'|'h3';}
+const {project,lang,heading:Heading='h3'}=Astro.props;const p=project.data;const t=labels[lang];const image=imageInfo(p.cover);
+---
+<article class="project-row" data-category={p.category}>
+<a class="project-cover" href={`/${lang}/projects/${p.slug}/`} tabindex="-1" aria-hidden="true"><img src={p.cover} alt="" width={image.width} height={image.height} srcset={image.srcset||undefined} sizes="(max-width:760px) 90vw, 550px" loading="lazy" decoding="async"/></a>
+<p class="project-meta">{engagementLabels[lang][p.engagement]}{p.company&&` · ${p.company}`}</p><Heading><a href={`/${lang}/projects/${p.slug}/`}>{p.title[lang]}</a></Heading><p>{p.summary[lang]}</p><ul class="tags" aria-label={lang==='en'?'Technologies and capabilities':'التقنيات والقدرات'}>{p.tags.map(tag=><li>{tag}</li>)}</ul><a class="text-link" href={`/${lang}/projects/${p.slug}/`}>{t.read}<span class="sr-only">: {p.title[lang]}</span></a></article>

@@ -1,0 +1,42 @@
+{
+  "outcomes": {
+    "en": [],
+    "ar": []
+  },
+  "start": "2018-03",
+  "relatedProjects": [],
+  "summary": {
+    "en": [
+      "Founded and grew a Saudi apparel e-commerce brand, generating over SAR 800K in revenue.",
+      "Managed end-to-end e-commerce operations, including storefront development, product management, suppliers, inventory, marketing campaigns, and customer experience across Shopify, Salla, and WordPress.",
+      "Leveraged sales analytics, customer behavior, and campaign performance data to optimize product pages, promotional offers, checkout flows, and customer acquisition."
+    ],
+    "ar": [
+      "تأسيس وتطوير علامة تجارية سعودية في قطاع الملابس، حققت مبيعات تجاوزت 800 ألف ريال سعودي.",
+      "إدارة عمليات التجارة الإلكترونية، بما يشمل المتجر الإلكتروني، والمنتجات، والموردين، والمخزون، والحملات التسويقية، وتجربة العملاء عبر Shopify وSalla وWordPress.",
+      "تحليل بيانات المبيعات وسلوك العملاء وأداء الحملات الإعلانية لتحسين صفحات المنتجات والعروض التسويقية ومسار الشراء وزيادة فعالية اكتساب العملاء."
+    ]
+  },
+  "slug": "cavalry",
+  "order": 20,
+  "companyUrl": "",
+  "status": "published",
+  "location": {
+    "en": "",
+    "ar": ""
+  },
+  "role": {
+    "en": "Founder & E-Commerce Operator",
+    "ar": "مؤسس ومدير تجارة إلكترونية"
+  },
+  "tags": [
+    "Shopify",
+    "Salla",
+    "WordPress",
+    "Analytics"
+  ],
+  "type": "founder",
+  "present": false,
+  "end": "2023-02",
+  "company": "Cavalry Apparel"
+}

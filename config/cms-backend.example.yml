@@ -1,0 +1,7 @@
+# Copy the exact backend block from your DecapBridge site into
+# config/cms-backend.yml WITHOUT its outer `backend:` line.
+# Keep all generated PKCE/auth fields, not just these examples.
+# These service URLs and site identifiers are public configuration, not secrets.
+name: git-gateway
+identity_url: https://auth.decapbridge.com/sites/YOUR_SITE_ID
+gateway_url: https://gateway.decapbridge.com/sites/YOUR_SITE_ID

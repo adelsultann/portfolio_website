@@ -1,0 +1,67 @@
+{
+  "timeframe": {
+    "en": "",
+    "ar": ""
+  },
+  "outcomes": {
+    "en": "Delivered a bilingual menu SaaS with QR menus, item and price management, branches, offers, and analytics.",
+    "ar": "تطوير منصة SaaS تجمع إدارة القوائم الرقمية والفروع والأسعار في نظام واحد.\n\n- تقليل الحاجة إلى إدخال الأصناف يدويًا من خلال الاستيراد المدعوم بالذكاء الاصطناعي.\n\n- تسهيل تحديث القوائم والأسعار دون الحاجة إلى إعادة طباعة القوائم.\n\n- توفير تجربة متعددة اللغات للعملاء.\n\n- إتاحة أدوات لإدارة العروض ومتابعة أداء القوائم."
+  },
+  "liveUrl": "https://www.so-fra.com/",
+  "summary": {
+    "en": "Sofra is a digital menu SaaS platform for restaurants and cafés, offering QR-based menus, real-time updates, multilingual experiences, and AI-assisted menu importing.",
+    "ar": "سفرة منصة SaaS لإدارة القوائم الرقمية للمطاعم والمقاهي، تتيح إنشاء قوائم QR وتحديثها لحظيًا، مع دعم اللغات المتعددة واستخدام الذكاء الاصطناعي لتسهيل إدخال الأصناف وإدارة المحتوى."
+  },
+  "slug": "sofra",
+  "featured": true,
+  "order": 10,
+  "contribution": {
+    "en": "Led the product's technical development, including application architecture, database design, user interfaces, and administrative dashboards. Implemented menu and branch management, along with AI-assisted workflows for importing and translating menu content.",
+    "ar": "بنيت المنتج وطوّرت مسارات الاستيراد والترجمة بمساعدة الذكاء الاصطناعي."
+  },
+  "pdf": "",
+  "coverAlt": {
+    "en": "Sofra · A bilingual menu SaaS",
+    "ar": "سفرة · منصة قوائم طعام ثنائية اللغة"
+  },
+  "gallery": [],
+  "implementation": {
+    "en": "- Built a centralized SaaS platform for managing digital menus, pricing, and branches.\n\n- Reduced manual menu entry requirements through AI-assisted importing.\n\n- Enabled instant menu updates without reprinting physical menus.\n\n- Delivered multilingual experiences for restaurant customers.\n\n- Provided tools for managing promotions and monitoring menu performance.",
+    "ar": "بُنيت المنصة باستخدام Next.js وTypeScript وSupabase، مع تطوير آلية لاستيراد القوائم من ملفات PDF والصور باستخدام OCR والذكاء الاصطناعي، وتحويلها إلى بيانات منظمة قابلة للتعديل. كما نُفّذ نظام متعدد اللغات لعرض القائمة وفق لغة جهاز العميل، مع دعم إدارة الفروع والعروض المجدولة والتحليلات."
+  },
+  "status": "published",
+  "role": {
+    "en": "Founder & Product Builder",
+    "ar": "المؤسس ومطوّر المنتج"
+  },
+  "cover": "/media/uploads/screenshot-2026-11-23-170923.png",
+  "title": {
+    "en": "Sofra | Smart Digital Menu Management Platform",
+    "ar": "سفرة | منصة ذكية لإدارة قوائم الطعام الرقمية"
+  },
+  "tags": [
+    "AI-assisted import",
+    "Translation",
+    "QR menus"
+  ],
+  "solution": {
+    "en": "Developed a centralized platform that enables restaurants to manage menus, items, pricing, and branches through a single dashboard. The product includes QR menus, multilingual support, scheduled promotions, and menu analytics.",
+    "ar": "تطوير منصة رقمية تتيح لأصحاب المطاعم إدارة القوائم والأصناف والأسعار والفروع من لوحة تحكم موحدة، مع إنشاء رموز QR، وعرض المحتوى باللغة المناسبة للعميل، وجدولة العروض، ومتابعة أداء القوائم من خلال التحليلات."
+  },
+  "seoTitle": {
+    "en": "Sofra · A bilingual menu SaaS",
+    "ar": "سفرة · منصة قوائم طعام ثنائية اللغة"
+  },
+  "company": "",
+  "repoUrl": "",
+  "category": "products",
+  "engagement": "personal product",
+  "problem": {
+    "en": "Traditional restaurant menus can be costly and time-consuming to update, especially when changing prices or adding items. Managing multiple languages and maintaining consistent menus across branches introduces additional operational complexity.",
+    "ar": "تعتمد بعض المطاعم والمقاهي على قوائم تقليدية يصعب تحديثها باستمرار، مما يزيد الجهد والتكلفة عند تغيير الأسعار أو إضافة الأصناف. كما أن إعداد قوائم بلغات متعددة وإدارتها عبر الفروع يمثل تحديًا تشغيليًا إضافيًا."
+  },
+  "seoDescription": {
+    "en": "QR menus, instant updates, and AI-assisted import for restaurants and cafés.",
+    "ar": "قوائم QR وتحديثات مباشرة واستيراد بمساعدة الذكاء الاصطناعي للمطاعم والمقاهي."
+  }
+}

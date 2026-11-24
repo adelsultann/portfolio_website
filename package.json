@@ -1,0 +1,30 @@
+{
+  "name": "adel-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node scripts/prepare-admin.mjs --local && node scripts/optimize-media.mjs && astro dev --host 127.0.0.1",
+    "check": "node scripts/optimize-media.mjs && astro check",
+    "build": "node scripts/prepare-admin.mjs && node scripts/optimize-media.mjs && astro build && node scripts/verify-build.mjs",
+    "preview": "astro preview --host 127.0.0.1",
+    "cms": "decap-server",
+    "test:content": "node scripts/test-content-lifecycle.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.3",
+    "@tailwindcss/vite": "4.3.5",
+    "astro": "7.3.8",
+    "tailwindcss": "4.3.5",
+    "sharp": "0.35.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "decap-server": "3.11.6",
+    "typescript": "5.9.3",
+    "yaml": "2.9.1"
+  }
+}

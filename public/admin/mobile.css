@@ -1,0 +1,31 @@
+/* Decap 3.9.0 responsive shell. Keep form controls and publishing reachable. */
+@media(max-width:760px){
+ #nc-root [class*="AppMainContainer"]{min-width:0!important;width:100%!important;margin:0!important}
+ #nc-root [class*="CollectionContainer"]{width:auto!important;margin:16px!important}
+ #nc-root [class*="SidebarContainer"]{position:static!important;width:100%!important;margin-bottom:22px!important}
+ #nc-root [class*="SidebarNavList"]{width:100%!important;display:grid!important;grid-template-columns:1fr 1fr}
+ #nc-root [class*="SidebarNavLink"]{width:auto!important;font-size:14px!important}
+ #nc-root [class*="CollectionMain"]{width:100%!important;padding:0!important}
+ #nc-root [class*="CollectionTopContainer"],#nc-root [class*="CollectionControlsContainer"]{width:100%!important}
+ #nc-root [class*="AppHeader"] a[href^="https:"],#nc-root [class*="AppHeader"] [class*="QuickAdd"]{display:none!important}
+ #editor-notice{font-size:12px!important;line-height:1.5!important;padding:9px 14px!important;min-height:64px!important}
+}
+@media(max-width:760px){
+ #nc-root [class*="EditorContainer"]{min-width:0!important;width:100%!important;right:0!important;display:block!important;overflow:auto!important;padding-top:120px!important}
+ #nc-root [class*="ToolbarContainer"]{min-width:0!important;width:100%!important;height:auto!important;min-height:110px!important;display:flex!important;flex-wrap:wrap!important;background:#fff!important}
+ #nc-root [class*="ToolbarSectionBackLink"]{width:100%!important;padding:6px 12px!important;font-size:12px!important}
+ #nc-root [class*="ToolbarSectionMain"]{width:100%!important;padding:7px 12px!important}
+ #nc-root [class*="ToolbarSectionMeta"]{display:none!important}
+ #nc-root [class*="ControlPaneContainer"]{width:100%!important;height:auto!important;overflow:visible!important;max-width:none!important}
+ #nc-root [class*="PreviewPaneContainer"]:not([class*="ControlPaneContainer"]){display:block!important;width:100%!important;min-height:55vh!important;height:55vh!important;overflow:auto!important;border-top:2px solid #8edcca!important}
+ #nc-root [class*="PreviewPaneFrame"]{width:100%!important;height:55vh!important}
+ #nc-root [class*="AppMainContainer"]{max-width:100%!important;overflow-x:hidden!important}
+}
+@media(max-width:760px){
+ #nc-root .SplitPane{position:static!important;display:block!important;height:auto!important;width:100%!important}
+ #nc-root .Pane{width:100%!important;height:auto!important;flex:none!important}
+ #nc-root .Resizer{display:none!important}
+ #nc-root [class*="-Editor "]{height:auto!important;overflow:visible!important}
+ #nc-root [class*="EditorToggle"]{display:none!important}
+ #nc-root [class*="AppHeader"]{min-width:0!important;width:100%!important;overflow:hidden!important}
+}

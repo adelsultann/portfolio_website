@@ -1,0 +1,178 @@
+---
+import {rolePoints} from "../../lib/experience";
+import Base from "../../layouts/Base.astro";
+import ProjectRow from "../../components/ProjectRow.astro";
+import {
+  siteData,
+  langs,
+  labels,
+  date,
+  engagementLabels,
+  type Lang,
+} from "../../lib/content";
+export function getStaticPaths() {
+  return langs.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const t = labels[lang];
+const { profile: p, projects, experience, certifications } = await siteData();
+---
+
+<Base lang={lang}>
+  <div class="layout">
+    <aside class="intro">
+      <div>
+        <p class="eyebrow">
+          {lang === "en"
+            ? "Product · Engineering · Ownership"
+            : "منتجات · هندسة · مسؤولية"}
+        </p>
+        <h1>{p.name[lang]}</h1>
+        <p class="headline">{p.headline[lang]}</p>
+        <p class="intro-copy">{p.intro[lang]}</p>
+        <p class="location">{p.location[lang]}</p>
+        <nav
+          class="nav"
+          aria-label={lang === "en" ? "On this page" : "في هذه الصفحة"}
+        >
+          {(
+            [
+              "about",
+              "projects",
+              "experience",
+              "certifications",
+              "contact",
+            ] as const
+          ).map((key) => (
+            <a href={`#${key}`}>{t[key]}</a>
+          ))}
+        </nav>
+      </div>
+      <div class="social">
+        {p.github && <a href={p.github}>GitHub</a>}
+        {p.linkedin && <a href={p.linkedin}>LinkedIn</a>}
+        <a href={`mailto:${p.email}`}>{lang === "en" ? "Email" : "البريد"}</a>
+        {p.cv && (
+          <a href={p.cv} download>
+            {t.cv}
+          </a>
+        )}
+      </div>
+    </aside>
+    <main id="content" class="content">
+      <section id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">
+          {t.about}
+        </h2>
+        <p class="about-copy">{p.about[lang]}</p>
+        <div class="skills">
+          {p.skills.map((skill) => (
+            <div>
+              <h3 >{skill.title[lang]}</h3>
+              <p>{skill.items.join(" · ")}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 class="section-title" id="projects-title">
+          {t.projects}
+        </h2>
+        <div class="project-list">
+          {projects.map((project) => (
+            <ProjectRow project={project} lang={lang} />
+          ))}
+        </div>
+        <a class="all-projects text-link" href={`/${lang}/projects/`}>
+          {t.all} ({projects.length})
+        </a>
+      </section>
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 class="section-title" id="experience-title">
+          {t.experience}
+        </h2>
+        {experience.map(({ data: e }) => (
+          <article class="experience-entry">
+            <span class="date">
+              {date(e.start, lang)} —{" "}
+              {e.present ? t.present : date(e.end, lang)}
+            </span>
+            <h3>{e.role[lang]}</h3>
+            <p class="company">
+              {e.companyUrl ? (
+                <a href={e.companyUrl}>{e.company}</a>
+              ) : (
+                e.company
+              )}{" "}
+              · {engagementLabels[lang][e.type]}
+            </p>
+            {e.location[lang] && <p>{e.location[lang]}</p>}
+            <ul class="experience-points">{[...new Set([...rolePoints(e.summary[lang]), ...e.outcomes[lang]])].map(item=><li>{item}</li>)}</ul>
+            <ul class="tags">
+              {e.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
+            {e.relatedProjects.map((slug) => {
+              const related = projects.find((p) => p.data.slug === slug);
+              return (
+                related && (
+                  <a class="text-link" href={`/${lang}/projects/${slug}/`}>
+                    {related.data.title[lang]}
+                  </a>
+                )
+              );
+            })}
+          </article>
+        ))}
+      </section>
+      <section id="certifications" aria-labelledby="cert-title">
+        <h2 class="section-title" id="cert-title">
+          {t.certifications}
+        </h2>
+        {certifications.map(({ data: c }) => (
+          <article class="cert">
+            {c.badge && (
+              <img src={c.badge} alt="" width="48" height="48" loading="lazy" />
+            )}
+            <div>
+              <h3>{c.name[lang]}</h3>
+              <p>{c.issuer}</p>
+              {c.issued && (
+                <p>
+                  {c.issued}
+                  {c.expires && ` — ${c.expires}`}
+                </p>
+              )}
+              {c.credentialId && <p>ID: {c.credentialId}</p>}
+              {c.verificationUrl && (
+                <a class="text-link" href={c.verificationUrl}>
+                  {lang === "en" ? "Verify credential" : "التحقّق من الشهادة"}
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+      </section>
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 class="section-title">{t.contact}</h2>
+        <h3 class="contact-title" id="contact-title">
+          {p.contact[lang]}
+        </h3>
+        <p>{p.contactBody[lang]}</p>
+        <a class="contact-email" href={`mailto:${p.email}`}>
+          {p.email}
+        </a>
+        <div class="social mt-6">
+          {p.linkedin && <a href={p.linkedin}>LinkedIn</a>}
+          {p.github && <a href={p.github}>GitHub</a>}
+          {p.cv && (
+            <a href={p.cv} download>
+              {t.cv}
+            </a>
+          )}
+        </div>
+      </section>
+    </main>
+  </div>
+</Base>

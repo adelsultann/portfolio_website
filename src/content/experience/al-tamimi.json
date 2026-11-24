@@ -1,0 +1,42 @@
+{
+  "outcomes": {
+    "en": [],
+    "ar": []
+  },
+  "start": "2023-04",
+  "relatedProjects": [],
+  "summary": {
+    "en": [
+      "Designed and developed a CRM and lead management system handling approximately 10,500 customer and candidate records, centralizing data and replacing fragmented manual workflows.",
+      "Built the company's website and integrated lead capture forms directly with the CRM, automating inquiry collection, request management, and customer follow-ups.",
+      "Analyzed business requirements and redesigned operational workflows, integrating SEO, analytics, and performance reporting to improve operational efficiency and lead source visibility."
+    ],
+    "ar": [
+      "تصميم وتطوير نظام CRM لإدارة أكثر من 10,500 سجل للعملاء والمرشحين، مع توحيد البيانات وأتمتة عمليات المتابعة بدلًا من الإجراءات اليدوية المتفرقة.",
+      "تطوير الموقع الإلكتروني وربط نماذج التواصل بنظام CRM، لأتمتة استقبال العملاء المحتملين وتنظيم طلباتهم ومتابعة مراحل تقديم الخدمة.",
+      "تطوير الموقع الإلكتروني وربط نماذج التواصل بنظام CRM، لأتمتة استقبال العملاء المحتملين وتنظيم طلباتهم ومتابعة مراحل تقديم الخدمة."
+    ]
+  },
+  "slug": "al-tamimi",
+  "order": 10,
+  "companyUrl": "",
+  "status": "published",
+  "location": {
+    "en": "",
+    "ar": ""
+  },
+  "role": {
+    "en": "CRM & Digital Transformation Specialist",
+    "ar": "أخصائي تطوير الأنظمة والتحول الرقمي"
+  },
+  "tags": [
+    "CRM",
+    "MySQL",
+    "GA4",
+    "GTM"
+  ],
+  "type": "employment",
+  "present": false,
+  "end": "2025-02",
+  "company": "Al-Tamimi Employment Agency"
+}

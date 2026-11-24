@@ -1,0 +1,115 @@
+{
+  "timeframe": {
+    "en": "",
+    "ar": ""
+  },
+  "outcomes": {
+    "en": "Established a structured content creation, review, and publishing process.\nReduced reliance on repetitive manual tasks.\nIntroduced mandatory human approval before publishing.\nCentralized draft management and approval tracking.\nCreated a repeatable workflow to support consistent publishing.",
+    "ar": "إنشاء آلية موحدة لإنتاج المحتوى ومراجعته ونشره.\n\nتقليل الاعتماد على العمليات اليدوية والمتكررة.\n\nضمان وجود موافقة بشرية قبل النشر.\n\nتنظيم المسودات وتتبع مراحل اعتمادها.\n\nتأسيس عملية قابلة للتكرار تساعد على انتظام النشر."
+  },
+  "liveUrl": "",
+  "summary": {
+    "en": "An AI-powered content automation system that streamlines Arabic content generation, human review, approval, and social media publishing.",
+    "ar": "نظام أتمتة لإنتاج المحتوى العربي بالذكاء الاصطناعي، يربط بين إنشاء المنشورات ومراجعتها بشريًا ونشرها تلقائيًا عبر منصات التواصل الاجتماعي."
+  },
+  "slug": "social-publishing",
+  "featured": true,
+  "order": 40,
+  "contribution": {
+    "en": "Designed and implemented the automation architecture using n8n, integrating AI content generation, draft management, and social publishing tools. Tailored the content workflows to Saudi audiences and the company's brand voice.",
+    "ar": "صممت ونفذت نظام الأتمتة باستخدام n8n، وربطت أدوات توليد المحتوى وإدارة المسودات والنشر، مع تخصيص المحتوى للجمهور السعودي ومراعاة أسلوب العلامة التجارية."
+  },
+  "pdf": "",
+  "coverAlt": {
+    "en": "Human-reviewed AI publishing",
+    "ar": "نشر محتوى الذكاء الاصطناعي بمراجعة بشرية"
+  },
+  "gallery": [
+    {
+      "type": "video",
+      "src": "/media/uploads/output_progressive_e57f3d90-301e-46c2-bb14-44546e8d1ed8.mp4",
+      "alt": {
+        "en": "Social workflow demonstration",
+        "ar": "عرض مسار النشر"
+      },
+      "caption": {
+        "en": "Privacy-edited silent workflow recording.",
+        "ar": "تسجيل صامت لمسار العمل بعد تنقيحه للخصوصية."
+      },
+      "poster": "/media/social-workflow.webp",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "type": "image",
+      "src": "/media/social-airtable.webp",
+      "alt": {
+        "en": "Airtable content review queue",
+        "ar": "قائمة مراجعة المحتوى في Airtable"
+      },
+      "caption": {
+        "en": "Content drafts and platform fields in Airtable.",
+        "ar": "مسودات المحتوى وحقول المنصات في Airtable."
+      },
+      "poster": "",
+      "width": 1791,
+      "height": 1160
+    },
+    {
+      "type": "image",
+      "src": "/media/social-n8n.webp",
+      "alt": {
+        "en": "n8n approved-content publishing workflow",
+        "ar": "مسار نشر المحتوى المعتمد في n8n"
+      },
+      "caption": {
+        "en": "The approved-content workflow connects review to publishing.",
+        "ar": "يربط مسار المحتوى المعتمد مرحلة المراجعة بالنشر."
+      },
+      "poster": "",
+      "width": 1852,
+      "height": 1172
+    }
+  ],
+  "implementation": {
+    "en": "Used n8n to schedule content generation and orchestrate workflows, with Airtable managing drafts and approval statuses. Once marked Approved, content moves through a separate publishing workflow using Buffer and Cloudinary. Deployed the automation system on a Docker-based VPS.",
+    "ar": "استخدمت n8n لجدولة إنشاء المحتوى وإدارة سير العمل، وAirtable لحفظ المسودات ومراجعتها عبر حالة Approved. بعد الاعتماد، يتولى مسار مستقل تجهيز المحتوى ونشره باستخدام Buffer وCloudinary. تم تشغيل النظام على VPS باستخدام Docker."
+  },
+  "status": "published",
+  "role": {
+    "en": "Automation Builder",
+    "ar": "مطوّر الأتمتة"
+  },
+  "cover": "/media/uploads/screenshot_n8n.png",
+  "title": {
+    "en": "AI-Powered Content Automation & Publishing",
+    "ar": "أتمتة إنشاء المحتوى ونشره بالذكاء الاصطناعي"
+  },
+  "tags": [
+    "n8n",
+    "Airtable",
+    "Buffer",
+    "Cloudinary",
+    "Docker"
+  ],
+  "solution": {
+    "en": "Designed an automated workflow that separates content generation from publishing. AI generates content drafts, which undergo human review and approval before being automatically passed to the publishing pipeline.",
+    "ar": "تطوير نظام يفصل بين إنشاء المحتوى ونشره، حيث يُنتج الذكاء الاصطناعي مسودات المحتوى، ثم تُراجع وتُعتمد بشريًا قبل انتقالها تلقائيًا إلى مرحلة النشر."
+  },
+  "seoTitle": {
+    "en": "Human-reviewed AI publishing",
+    "ar": "نشر محتوى الذكاء الاصطناعي بمراجعة بشرية"
+  },
+  "company": "",
+  "repoUrl": "",
+  "category": "automation",
+  "engagement": "other",
+  "problem": {
+    "en": "Content production relied heavily on manual effort, resulting in inconsistent publishing and time-consuming preparation and review processes, while maintaining brand consistency remained essential.",
+    "ar": "اعتمد إنتاج المحتوى ونشره على الجهد اليدوي، مما أدى إلى عدم انتظام النشر وزيادة الوقت المستغرق في إعداد المنشورات ومراجعتها، مع الحاجة إلى الحفاظ على هوية العلامة التجارية وأسلوبها."
+  },
+  "seoDescription": {
+    "en": "AI-assisted Arabic content moves from Airtable approval to social publishing.",
+    "ar": "ينتقل المحتوى العربي المُعدّ بمساعدة الذكاء الاصطناعي من اعتماد Airtable إلى النشر."
+  }
+}

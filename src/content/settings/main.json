@@ -1,0 +1,32 @@
+{
+  "domain": "https://adelalsultan.com",
+  "description": {
+    "en": "Adel Al-Sultan — Product Engineer in Riyadh building mobile products, AI workflows, and growth systems.",
+    "ar": "عادل السلطان — مهندس منتجات في الرياض أبني تطبيقات الجوال ومسارات عمل الذكاء الاصطناعي وأنظمة النمو."
+  },
+  "categories": [
+    {
+      "id": "products",
+      "label": {
+        "en": "Products",
+        "ar": "المنتجات"
+      }
+    },
+    {
+      "id": "automation",
+      "label": {
+        "en": "AI & Automation",
+        "ar": "الذكاء الاصطناعي والأتمتة"
+      }
+    },
+    {
+      "id": "growth",
+      "label": {
+        "en": "Analytics & Growth",
+        "ar": "التحليلات والنمو"
+      }
+    }
+  ],
+  "projectOrder": [],
+  "ogImage": "/media/og.jpg"
+}

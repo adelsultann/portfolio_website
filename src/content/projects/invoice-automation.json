@@ -1,0 +1,84 @@
+{
+  "timeframe": {
+    "en": "",
+    "ar": ""
+  },
+  "outcomes": {
+    "en": "- Reduced manual data entry for invoice and expense records.\n- Streamlined expense documentation through centralized, automated recording.\n- Standardized invoice submission, processing, and tracking.\n- Delivered a cost-effective solution using existing tools without requiring a full accounting system.",
+    "ar": "- تقليل الحاجة إلى الإدخال اليدوي للفواتير والمصروفات.\n- تسريع عملية توثيق المصروفات وتنظيمها في سجل موحّد.\n- توحيد آلية استقبال الفواتير وتسجيلها ومتابعتها.\n- تقديم حل منخفض التكلفة بالاعتماد على الأدوات والخدمات المتاحة، دون الحاجة إلى بناء نظام محاسبي متكامل"
+  },
+  "liveUrl": "",
+  "summary": {
+    "en": "WhatsApp invoices become structured bookkeeping records through OCR and AI.",
+    "ar": "تحويل فواتير واتساب إلى سجلات محاسبية منظّمة باستخدام OCR والذكاء الاصطناعي."
+  },
+  "slug": "invoice-automation",
+  "featured": true,
+  "order": 30,
+  "contribution": {
+    "en": "Independently designed and implemented the end-to-end automation solution as a freelance project. My responsibilities included workflow architecture, WhatsApp Business API integration, n8n automation, OCR and AI-based data extraction, expense recording, and automated confirmation messaging.",
+    "ar": "تولّيت تحليل المشكلة وتصميم وتنفيذ نظام الأتمتة بالكامل كمشروع مستقل (Freelance)، بدءًا من ربط WhatsApp Business API، وبناء سير العمل باستخدام n8n، ودمج OCR والذكاء الاصطناعي لاستخراج البيانات، وصولًا إلى أتمتة تسجيل المصروفات وإرسال إشعارات التأكيد"
+  },
+  "pdf": "",
+  "coverAlt": {
+    "en": "Invoice & expense automation",
+    "ar": "أتمتة الفواتير والمصروفات"
+  },
+  "gallery": [
+    {
+      "type": "video",
+      "src": "/media/uploads/1753366770595.mp4",
+      "alt": {
+        "en": "Invoice automation demonstration",
+        "ar": "عرض أتمتة الفواتير"
+      },
+      "caption": {
+        "en": "Privacy-edited silent demonstration. Invoice, chat, spreadsheet, and browser details are masked.",
+        "ar": "عرض صامت منقّح للخصوصية. أُخفيت بيانات الفواتير والمحادثات والجداول والمتصفح."
+      },
+      "poster": "/media/invoice-workflow.webp",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "implementation": {
+    "en": "n8n orchestrates WhatsApp Business API, OCR and AI extraction of amount, date, and category, Google Sheets API, webhooks, and JSON payloads.",
+    "ar": "ينسّق n8n بين WhatsApp Business API واستخراج المبلغ والتاريخ والتصنيف عبر OCR والذكاء الاصطناعي وGoogle Sheets API وWebhooks وJSON."
+  },
+  "status": "published",
+  "role": {
+    "en": "Automation Developer",
+    "ar": "مطوّر أتمتة"
+  },
+  "cover": "/media/uploads/أتمتة-الفواتير-عبر-واتساب-وai.png",
+  "title": {
+    "en": "Invoice & expense automation",
+    "ar": "أتمتة الفواتير والمصروفات"
+  },
+  "tags": [
+    "n8n",
+    "OCR",
+    "WhatsApp API",
+    "Google Sheets"
+  ],
+  "solution": {
+    "en": "Developed an automated invoice processing workflow that allows field representatives to submit invoices via WhatsApp. The system uses OCR and AI to extract and categorize expenses, automatically records them in Google Sheets, and sends confirmation messages upon successful processing.",
+    "ar": "طورت نظام أتمتة يتيح للمندوبين إرسال صور الفواتير عبر WhatsApp، ثم استخراج بياناتها وتصنيف المصروفات باستخدام OCR والذكاء الاصطناعي، وتسجيلها تلقائيًا في Google Sheets، مع إرسال رسالة تأكيد للمندوب بعد إتمام العملية."
+  },
+  "seoTitle": {
+    "en": "Invoice & expense automation",
+    "ar": "أتمتة الفواتير والمصروفات"
+  },
+  "company": "",
+  "repoUrl": "",
+  "category": "automation",
+  "engagement": "freelance",
+  "problem": {
+    "en": "Representatives submitted invoices and recorded expenses manually, delaying bookkeeping and making follow-up harder.",
+    "ar": "اعتمدت الشركة على الإدخال اليدوي لفواتير ومصروفات المندوبين، مما أدى إلى تأخر توثيق المصروفات، وزيادة احتمالية الأخطاء، وصعوبة متابعة البيانات المالية بشكل منظم."
+  },
+  "seoDescription": {
+    "en": "WhatsApp invoices become structured bookkeeping records through OCR and AI.",
+    "ar": "تحويل فواتير واتساب إلى سجلات محاسبية منظّمة باستخدام OCR والذكاء الاصطناعي."
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "contact": {
+    "en": "Get in Touch",
+    "ar": "لنحوّل الأفكار إلى منتجات رقمية"
+  },
+  "skills": [
+    {
+      "title": {
+        "en": "Product & mobile",
+        "ar": "تطوير الويب وتطبيقات الجوال"
+      },
+      "items": [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "React",
+        "TypeScript"
+      ]
+    },
+    {
+      "title": {
+        "en": "Backend & Databases",
+        "ar": "الأنظمة وقواعد البيانات"
+      },
+      "items": [
+        "PostgreSQL  Firebase  REST APIs  Webhooks"
+      ]
+    },
+    {
+      "title": {
+        "en": "AI & Automation",
+        "ar": "الذكاء الاصطناعي والأتمتة"
+      },
+      "items": [
+        "LLM Integration  n8n  OCR  AI Workflows"
+      ]
+    },
+    {
+      "title": {
+        "ar": "التحليلات وقياس الأداء",
+        "en": "Analytics & Growth"
+      },
+      "items": [
+        "GA4  Google Tag Manager  PostHog  Power BI  Conversion Tracking"
+      ]
+    },
+    {
+      "title": {
+        "ar": "النشر والبنية التحتية",
+        "en": "DevOps & Deployment"
+      },
+      "items": [
+        "Docker  GitHub Actions  CI/CD  Cloudflare  VPS"
+      ]
+    }
+  ],
+  "contactBody": {
+    "en": "I'm open to career opportunities and collaborations in digital product development, AI-powered solutions, automation, and technology projects that solve real problems and deliver measurable value.",
+    "ar": "متاح للفرص المهنية والتعاون في تطوير المنتجات الرقمية,وحلول الذكاء الاصطناعي والأتمتة والمشاريع التقنية التي تعالج تحديات حقيقية وتحقق قيمة ملموسة"
+  },
+  "github": "https://github.com/adelsultann",
+  "name": {
+    "en": "Adel Al-Sultan",
+    "ar": "عادل السلطان"
+  },
+  "intro": {
+    "en": "I'm a Digital Product Developer passionate about turning ideas into real-world solutions. I combine software development, AI, and business insights to build practical, scalable digital products—from concept to launch.",
+    "ar": "مطور منتجات رقمية، أحول الأفكار إلى حلول تقنية واقعية. أجمع بين تطوير البرمجيات والذكاء الاصطناعي وفهم الأعمال لبناء منتجات رقمية قابلة للنمو، من الفكرة وحتى الإطلاق."
+  },
+  "about": {
+    "en": "My experience spans software development, product building, business automation, and digital growth.\n\nI've developed web and mobile applications, built operational systems that streamline workflows, and implemented analytics and CRM solutions to help businesses make better decisions and improve performance.\n\nBeyond development, I've managed digital marketing campaigns, worked with real customer data, and built an e-commerce business that generated over SAR 800K in revenue.\n\nThese experiences shaped how I approach technology. I don't just focus on how to build something, but also why it matters, who it serves, and what measurable value it creates.",
+    "ar": "تمتد خبرتي بين تطوير البرمجيات، وبناء المنتجات الرقمية، وأتمتة الأعمال، والتسويق الرقمي\n\nعملت على تطوير تطبيقات ومواقع إلكترونية، وبناء أنظمة تشغيلية تسهم في تحسين كفاءة العمل، بالإضافة إلى تطوير حلول لإدارة علاقات العملاء وتحليل البيانات، تساعد المنشآت على اتخاذ قرارات أفضل وتحسين أدائها.\n\nولا تقتصر تجربتي على الجانب التقني؛ فقد أدرت حملات تسويقية رقمية، وعملت على تحليل سلوك العملاء وقياس الأداء، كما أسست مشروعًا في التجارة الإلكترونية حقق مبيعات تجاوزت 800 ألف ريال.\n\nهذه التجارب شكّلت طريقتي في العمل؛ فلا أركز فقط على كيفية بناء المنتج، بل على فهم المشكلة التي يعالجها، والفئة التي يخدمها، والقيمة الفعلية التي يقدمها."
+  },
+  "cv": "/media/adel-alsultan-cv.pdf",
+  "headline": {
+    "en": "I focus on creating digital experiences that balance usability, performance, and real business value. My work spans web and mobile development, with an emphasis on understanding challenges, solving problems, and delivering solutions that make a measurable impact.",
+    "ar": "أهتم ببناء تجارب رقمية تجمع بين سهولة الاستخدام والقيمة الفعلية للمستخدم. أعمل على تطوير التطبيقات والمواقع، وتحسين أدائها وتجربة استخدامها، مع التركيز على فهم التحديات وتحويلها إلى حلول عملية تحقق أهداف الأعمال."
+  },
+  "location": {
+    "en": "Riyadh, Saudi Arabia",
+    "ar": "الرياض، المملكة العربية السعودية"
+  },
+  "email": "adelalsultan647@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/adel-alsultan-69b57119a/"
+}

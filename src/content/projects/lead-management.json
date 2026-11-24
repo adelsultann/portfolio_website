@@ -1,0 +1,114 @@
+{
+  "timeframe": {
+    "en": "",
+    "ar": ""
+  },
+  "outcomes": {
+    "en": "Captured 170+ leads within 3 days, including customer details and campaign attribution.\n\nCentralized lead management and follow-up workflows.\n\nConnected lead records to advertising sources beyond WhatsApp click tracking.\n\nEnabled offline conversion reporting to Google Ads to support campaign optimization.\n\nAutomated customer data recording across CRM and MySQL, reducing manual administrative work.",
+    "ar": "تسجيل أكثر من 170 عميلًا محتملًا خلال 3 أيام مع توثيق بياناتهم ومصادرهم الإعلانية.\n\nإنشاء قاعدة بيانات مركزية لتنظيم العملاء ومتابعتهم.\n\nربط العملاء بمصادر الحملات الإعلانية بدل الاعتماد على نقرات WhatsApp فقط.\n\nتفعيل إرسال بيانات التحويلات الفعلية إلى Google Ads لدعم تحسين الاستهداف.\n\nأتمتة تسجيل بيانات العملاء في CRM وMySQL دون الحاجة إلى الإدخال اليدوي."
+  },
+  "liveUrl": "",
+  "summary": {
+    "en": "Developed a CRM and marketing attribution system that connects advertising campaigns with actual leads, automates customer data collection, and feeds offline conversions back into Google Ads for improved campaign measurement.",
+    "ar": "تطوير نظام CRM يربط الحملات الإعلانية بالعملاء المحتملين، مع أتمتة جمع بياناتهم ومتابعتهم، وتتبع مصادر التحويل، وإرسال نتائج العملاء الفعلية إلى Google Ads لتحسين قياس أداء الحملات."
+  },
+  "slug": "lead-management",
+  "featured": false,
+  "order": 50,
+  "contribution": {
+    "en": "Independently designed and implemented the solution as a freelance project. Developed the lead capture form, implemented campaign attribution tracking, built automated CRM workflows, integrated customer data storage, and configured offline conversion tracking for Google Ads.",
+    "ar": "تولّيت تصميم وتنفيذ الحل كمشروع مستقل (Freelance)، بدءًا من تطوير نموذج جمع العملاء وربط بيانات الحملات الإعلانية، وصولًا إلى بناء نظام CRM وأتمتة تسجيل البيانات وتحديثها. كما نفذت آلية لتتبع حالات العملاء وربط التحويلات الفعلية بمنصة Google Ads."
+  },
+  "pdf": "/media/crm-overview-redacted.pdf",
+  "coverAlt": {
+    "en": "Lead capture & campaign attribution",
+    "ar": "التقاط العملاء المحتملين وإسناد الحملات"
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/uploads/screenshot-2026-11-24-125214.png",
+      "alt": {
+        "en": "CRM workflow overview, page 1",
+        "ar": "نظرة على مسار CRM، صفحة 1"
+      },
+      "caption": {
+        "en": "Public derivative; private records and infrastructure details removed.",
+        "ar": "نسخة عامة مع إخفاء السجلات الخاصة وتفاصيل البنية التحتية."
+      },
+      "poster": "",
+      "width": 1121,
+      "height": 1400
+    },
+    {
+      "type": "image",
+      "src": "/media/uploads/screenshot-2026-11-24-125218.png",
+      "alt": {
+        "en": "CRM workflow overview, page 2",
+        "ar": "نظرة على مسار CRM، صفحة 2"
+      },
+      "caption": {
+        "en": "Public derivative; private records and infrastructure details removed.",
+        "ar": "نسخة عامة مع إخفاء السجلات الخاصة وتفاصيل البنية التحتية."
+      },
+      "poster": "/media/uploads/screenshot-2026-11-24-125224.png",
+      "width": 1121,
+      "height": 1400
+    },
+    {
+      "type": "image",
+      "src": "/media/crm-3.webp",
+      "alt": {
+        "en": "CRM workflow overview, page 3",
+        "ar": "نظرة على مسار CRM، صفحة 3"
+      },
+      "caption": {
+        "en": "Public derivative; private records and infrastructure details removed.",
+        "ar": "نسخة عامة مع إخفاء السجلات الخاصة وتفاصيل البنية التحتية."
+      },
+      "poster": "",
+      "width": 1121,
+      "height": 1400
+    }
+  ],
+  "implementation": {
+    "en": "Developed a lead capture form integrated with WhatsApp.\n\nImplemented UTM tracking to capture campaign attribution data.\n\nAutomated lead collection and management through Google Sheets.\n\nIntegrated MySQL for centralized customer data storage.\n\nBuilt workflows for organizing and tracking leads by service, region, and status.\n\nConfigured Google Ads Offline Conversion Tracking to send actual conversion outcomes back to advertising campaigns.",
+    "ar": "تطوير نموذج لجمع بيانات العملاء قبل الانتقال إلى WhatsApp.\n\nالتقاط بيانات مصدر الزيارة والحملة الإعلانية باستخدام UTM Tracking.\n\nأتمتة تسجيل العملاء وتنظيم بياناتهم في Google Sheets.\n\nتخزين بيانات العملاء تلقائيًا في قاعدة بيانات MySQL.\n\nإنشاء آلية لمتابعة العملاء حسب الخدمة والمنطقة وحالة العميل.\n\nربط نتائج التحويل الفعلية بـ Google Ads باستخدام Offline Conversion Tracking."
+  },
+  "status": "published",
+  "role": {
+    "en": "CRM & Automation Developer",
+    "ar": "مطوّر CRM وأتمتة"
+  },
+  "cover": "/media/crm-1.webp",
+  "title": {
+    "en": "CRM Development & Marketing Attribution Automation",
+    "ar": "تطوير نظام CRM وربط العملاء بالحملات الإعلانية"
+  },
+  "tags": [
+    "MySQL",
+    "Google Sheets",
+    "Google Ads",
+    "CRM"
+  ],
+  "solution": {
+    "en": "Built an integrated lead capture and CRM workflow that collects customer information before redirecting users to WhatsApp. The system automatically records campaign attribution data, organizes leads by service, location, and status, and connects customer outcomes to their advertising sources.",
+    "ar": "تطوير مسار متكامل يبدأ بنموذج لجمع بيانات العميل قبل تحويله إلى WhatsApp، مع تسجيل بياناته ومصدر الحملة تلقائيًا في نظام CRM. يتيح النظام متابعة العملاء وتصنيفهم حسب الخدمة والمنطقة ومرحلة الاهتمام، وربط نتائجهم بالحملات الإعلانية لتحسين قياس التحويلات."
+  },
+  "seoTitle": {
+    "en": "Lead capture & campaign attribution",
+    "ar": "التقاط العملاء المحتملين وإسناد الحملات"
+  },
+  "company": "",
+  "repoUrl": "",
+  "category": "growth",
+  "engagement": "freelance",
+  "problem": {
+    "en": "The company relied on WhatsApp clicks as its primary advertising conversion metric, without a centralized CRM to manage leads or track their progression. This made it difficult to evaluate lead quality, identify effective campaigns, and measure actual business outcomes.",
+    "ar": "اعتمدت الشركة على نقرات WhatsApp كمؤشر رئيسي لنجاح حملاتها الإعلانية، دون وجود نظام مركزي لإدارة العملاء أو تتبع مصادرهم ونتائج التواصل معهم. أدى ذلك إلى صعوبة تقييم جودة العملاء، ومتابعة طلباتهم، ومعرفة الحملات التي تحقق نتائج فعلية."
+  },
+  "seoDescription": {
+    "en": "A pre-WhatsApp form, shared CRM, and persistent records connect inquiries to campaign sources.",
+    "ar": "نموذج قبل واتساب ونظام CRM مشترك وسجلات دائمة تربط الاستفسارات بمصادر الحملات."
+  }
+}

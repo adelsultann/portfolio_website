@@ -1,0 +1,83 @@
+{
+  "slug": "whatsapp-event-tracking",
+  "title": {
+    "en": "WhatsApp intent tracking with GA4",
+    "ar": "تتبّع نقرات واتساب باستخدام GA4"
+  },
+  "summary": {
+    "en": "A custom event makes contact-button interactions visible in analytics.",
+    "ar": "حدث مخصّص يُظهر التفاعل مع زر التواصل داخل التحليلات."
+  },
+  "category": "growth",
+  "engagement": "freelance",
+  "company": "",
+  "role": {
+    "en": "Analytics Implementation",
+    "ar": "تنفيذ التحليلات"
+  },
+  "timeframe": {
+    "en": "",
+    "ar": ""
+  },
+  "problem": {
+    "en": "Traffic totals did not show whether visitors clicked the WhatsApp contact button.",
+    "ar": "لم تكن أعداد الزيارات تكشف ما إذا كان الزوار ينقرون زر التواصل عبر واتساب."
+  },
+  "solution": {
+    "en": "A GTM trigger sends the whatsapp_click custom event to GA4 when the button is clicked.",
+    "ar": "يرسل مُشغّل GTM الحدث المخصّص whatsapp_click إلى GA4 عند النقر على الزر."
+  },
+  "contribution": {
+    "en": "Implemented custom-event tracking for a freelance engagement and checked the event in GA4 reporting.",
+    "ar": "نفّذت تتبّع الحدث ضمن مشروع عمل حر وتحقّقت من ظهوره في تقارير GA4."
+  },
+  "implementation": {
+    "en": "Google Tag Manager handles event triggering and Google Analytics 4 records the button interactions.",
+    "ar": "يدير Google Tag Manager تشغيل الحدث، ويسجّل Google Analytics 4 التفاعلات مع الزر."
+  },
+  "outcomes": {
+    "en": "The supplied report shows 240 whatsapp_click events in its selected reporting period. Events measure clicks, not conversations, qualified leads, or sales.",
+    "ar": "يُظهر التقرير المرفق 240 حدث whatsapp_click خلال الفترة المحددة فيه. تقيس الأحداث النقرات، ولا تثبت محادثات أو عملاء مؤهلين أو مبيعات."
+  },
+  "tags": [
+    "GA4",
+    "Google Tag Manager",
+    "Custom events"
+  ],
+  "featured": false,
+  "order": 60,
+  "status": "published",
+  "cover": "/media/ga4-events.webp",
+  "coverAlt": {
+    "en": "WhatsApp intent tracking with GA4",
+    "ar": "تتبّع نقرات واتساب باستخدام GA4"
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/ga4-events.webp",
+      "alt": {
+        "en": "GA4 report showing 240 WhatsApp click events",
+        "ar": "تقرير GA4 يعرض 240 حدث نقرة واتساب"
+      },
+      "caption": {
+        "en": "240 tracked events in the report’s selected period.",
+        "ar": "240 حدثاً مسجّلاً خلال الفترة المحددة في التقرير."
+      },
+      "poster": "",
+      "width": 1280,
+      "height": 1050
+    }
+  ],
+  "liveUrl": "",
+  "repoUrl": "",
+  "pdf": "",
+  "seoTitle": {
+    "en": "WhatsApp intent tracking with GA4",
+    "ar": "تتبّع نقرات واتساب باستخدام GA4"
+  },
+  "seoDescription": {
+    "en": "A custom event makes contact-button interactions visible in analytics.",
+    "ar": "حدث مخصّص يُظهر التفاعل مع زر التواصل داخل التحليلات."
+  }
+}

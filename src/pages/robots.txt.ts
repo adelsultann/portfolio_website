@@ -1,0 +1,2 @@
+import {siteData} from '../lib/content';
+export async function GET(){const {settings}=await siteData();const preview=import.meta.env.CF_PAGES_BRANCH&&import.meta.env.CF_PAGES_BRANCH!=='main';return new Response(preview?'User-agent: *\nDisallow: /\n':`User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: ${settings.domain}/sitemap-index.xml\n`,{headers:{'Content-Type':'text/plain'}});}
