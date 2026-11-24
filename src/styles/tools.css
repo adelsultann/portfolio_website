@@ -55,3 +55,12 @@ ol.tool-steps {list-style:decimal;}
 @media(max-width:900px) {.tool-workspace {grid-template-columns:1fr;}}
 @media(max-width:760px) {.tool-grid {grid-template-columns:1fr;}.tool-form,.tool-results,.tool-card {padding:20px;}.tool-more ul {grid-template-columns:1fr;}}
 @media(max-width:420px) {.tool-fields {grid-template-columns:1fr;}.tool-field-wide {grid-column:auto;}}
+
+.tool-card, .tool-results, .tool-form { background: var(--surface); }
+.tool-category h2 { margin-bottom: 16px; font-weight: 600; }
+.tool-card { display: flex; flex-direction: column; align-items: start; }
+.tool-card .text-link { margin-top: auto; }
+.tool-results { border-block-start: 3px solid var(--accent); }
+.tool-metrics dd { font-variant-numeric: tabular-nums; font-weight: 600; }
+.tool-metrics > div:first-child dd { font-size: clamp(2rem, 4vw, 3rem); }
+.tool-breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; }

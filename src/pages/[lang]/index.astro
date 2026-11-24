@@ -1,4 +1,5 @@
 ---
+import {imageInfo} from '../../lib/media';
 import {rolePoints} from "../../lib/experience";
 import Base from "../../layouts/Base.astro";
 import ProjectRow from "../../components/ProjectRow.astro";
@@ -19,62 +20,25 @@ const { profile: p, projects, experience, certifications } = await siteData();
 ---
 
 <Base lang={lang}>
-  <div class="layout">
-    <aside class="intro">
-      <div>
-        <p class="eyebrow">
-          {lang === "en"
-            ? "Product Development · AI · Growth"
-            : "تطوير المنتجات · الذكاء الاصطناعي · النمو"}
-        </p>
+  <main id="content" class="portfolio">
+    <section class="portfolio-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">{lang === "en" ? "Product Engineer" : "مطور منتجات رقمية"}</p>
         <h1>{p.name[lang]}</h1>
-        <p class="headline">{p.headline[lang]}</p>
-        <p class="intro-copy">{p.intro[lang]}</p>
         <p class="location">{p.location[lang]}</p>
-        <nav
-          class="nav"
-          aria-label={lang === "en" ? "On this page" : "في هذه الصفحة"}
-        >
-          {(
-            [
-              "about",
-              "projects",
-              "experience",
-              "certifications",
-              "contact",
-            ] as const
-          ).map((key) => (
-            <a href={`#${key}`}>{t[key]}</a>
-          ))}
-        </nav>
-      </div>
-      <div class="social">
-        {p.github && <a href={p.github}>GitHub</a>}
-          {p.x && <a href={p.x}>X</a>}
-        {p.linkedin && <a href={p.linkedin}>LinkedIn</a>}
-        <a href={`mailto:${p.email}`}>{lang === "en" ? "Email" : "البريد"}</a>
-        {p.cv && (
-          <a href={p.cv} download>
-            {t.cv}
-          </a>
-        )}
-      </div>
-    </aside>
-    <main id="content" class="content">
-      <section id="about" aria-labelledby="about-title">
-        <h2 class="section-title" id="about-title">
-          {t.about}
-        </h2>
-        <p class="about-copy">{p.about[lang]}</p>
-        <div class="skills">
-          {p.skills.map((skill) => (
-            <div>
-              <h3 >{skill.title[lang]}</h3>
-              <p>{skill.items.join(" · ")}</p>
-            </div>
-          ))}
+        <p class="hero-intro">{p.intro[lang]}</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#projects">{lang === "en" ? "View projects" : "استعرض المشاريع"}</a>
+          <a href="#contact">{lang === "en" ? "Get in touch" : "تواصل معي"}</a>
         </div>
-      </section>
+      </div>
+      {projects[0] && <figure class="hero-work">
+        <a href={`/${lang}/projects/${projects[0].data.slug}/`}>
+          <img src={projects[0].data.cover} alt="" width={imageInfo(projects[0].data.cover).width} height={imageInfo(projects[0].data.cover).height} srcset={imageInfo(projects[0].data.cover).srcset || undefined} sizes="(max-width:760px) 90vw, 48vw" fetchpriority="high"/>
+          <span>{projects[0].data.title[lang]}</span>
+        </a>
+      </figure>}
+    </section>
       <section id="projects" aria-labelledby="projects-title">
         <h2 class="section-title" id="projects-title">
           {t.projects}
@@ -127,6 +91,21 @@ const { profile: p, projects, experience, certifications } = await siteData();
           </article>
         ))}
       </section>
+      <section id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">
+          {t.about}
+        </h2>
+        <p>{p.headline[lang]}</p>
+        <p class="about-copy">{p.about[lang]}</p>
+        <div class="skills">
+          {p.skills.map((skill) => (
+            <div>
+              <h3 >{skill.title[lang]}</h3>
+              <p>{skill.items.join(" · ")}</p>
+            </div>
+          ))}
+        </div>
+      </section>
       <section id="certifications" aria-labelledby="cert-title">
         <h2 class="section-title" id="cert-title">
           {t.certifications}
@@ -175,6 +154,5 @@ const { profile: p, projects, experience, certifications } = await siteData();
           )}
         </div>
       </section>
-    </main>
-  </div>
+  </main>
 </Base>
