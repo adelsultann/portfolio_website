@@ -33,6 +33,14 @@ npm run preview
 
 Read [Deployment](docs/DEPLOYMENT.md), [Editing](docs/EDITING.md), [Evidence and media decisions](docs/CONTENT-AUDIT.md), and [Verification](docs/TESTING.md).
 
+## Useful tools
+
+Six free browser-based tools live at `/en/tools/` and `/ar/tools/`: campaign
+profitability, UTM links, GA4 events, automation savings, JSON payload inspection,
+and SaaS unit economics. Each tool has its own static search-friendly page.
+See [Tools](docs/TOOLS.md) for structure, assumptions and how to add another tool.
+Run `npm run test:tools` to check formulas, validation and output handling.
+
 ## Domain and categories
 
 The canonical domain has one source: Site Settings → Production domain (`src/content/settings/main.json`). CMS build configuration, robots, sitemap, metadata and structured data read it. Categories can be added in Site Settings; projects select them by relation.

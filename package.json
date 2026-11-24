@@ -12,7 +12,8 @@
     "build": "node scripts/prepare-admin.mjs && node scripts/optimize-media.mjs && astro build && node scripts/verify-build.mjs",
     "preview": "astro preview --host 127.0.0.1",
     "cms": "decap-server",
-    "test:content": "node scripts/test-content-lifecycle.mjs"
+    "test:content": "node scripts/test-content-lifecycle.mjs",
+    "test:tools": "node --experimental-strip-types --test scripts/test-tools.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

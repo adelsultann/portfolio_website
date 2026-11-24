@@ -1,0 +1,29 @@
+---
+import Base from '../../../layouts/Base.astro';
+import '../../../styles/tools.css';
+import {langs, siteData, type Lang} from '../../../lib/content';
+import {tools,categories,copy} from '../../../tools/registry';
+export function getStaticPaths(){return langs.map(lang=>({params:{lang}}));}
+const lang=Astro.params.lang as Lang;
+const {settings}=await siteData();
+const url=new URL(`/${lang}/tools/`,settings.domain).href;
+const structuredData={'@context':'https://schema.org','@type':'CollectionPage',name:copy.heading[lang],description:copy.description[lang],url,inLanguage:lang,mainEntity:{'@type':'ItemList',itemListElement:tools.map((tool,index)=>({'@type':'ListItem',position:index+1,name:tool.title[lang],url:new URL(`/${lang}/tools/${tool.slug}/`,settings.domain).href}))}};
+---
+<Base lang={lang} title={copy.heading[lang]} description={copy.description[lang]}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g,'\u003c')}/>
+  <main class="page tools-page" id="content">
+    <p class="eyebrow">{lang==='en'?'Built from practical work':'أدوات من واقع العمل'}</p>
+    <h1>{copy.heading[lang]}</h1>
+    <p class="page-lead">{copy.intro[lang]}</p>
+    <p class="tool-privacy">{copy.privacy[lang]}</p>
+    {Object.entries(categories).map(([category,label])=><section class="tool-category" aria-labelledby={`category-${category}`}>
+      <h2 id={`category-${category}`}>{label[lang]}</h2>
+      <div class="tool-grid">{tools.filter(tool=>tool.category===category).map(tool=><article class="tool-card">
+        <h3><a href={`/${lang}/tools/${tool.slug}/`}>{tool.title[lang]}<span aria-hidden="true"> ↗</span></a></h3>
+        <p>{tool.description[lang]}</p>
+        <a class="text-link" href={`/${lang}/tools/${tool.slug}/`}>{lang==='en'?'Open tool':'استخدم الأداة'}</a>
+      </article>)}</div>
+    </section>)}
+    <section class="tool-guide"><h2>{lang==='en'?'Choose a tool for your next decision':'اختر أداة تساعدك على اتخاذ قرارك'}</h2><p>{lang==='en'?'Start with ROAS to examine campaign economics, or use the UTM builder and GA4 event builder to prepare measurement. Before automating a workflow, estimate the time saved and ongoing costs. For a subscription product, review acquisition cost and payback. Use the JSON inspector when you need to understand the data moving between systems.':'ابدأ بحاسبة ROAS لتقييم اقتصاديات الحملة، أو استخدم منشئ روابط UTM ومنشئ أحداث GA4 لتجهيز القياس. وقبل أتمتة مهمة، قدّر الوقت الموفّر وتكاليف التشغيل. وللمنتجات الاشتراكية، راجع تكلفة اكتساب العميل وفترة الاسترداد. واستخدم فاحص JSON لفهم البيانات المتبادلة بين الأنظمة.'}</p></section>
+  </main>
+</Base>

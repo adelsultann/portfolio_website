@@ -1,0 +1,47 @@
+---
+import {text, type Tool, type Lang} from '../../tools/types';
+interface Props {tool:Tool; lang:Lang;}
+const {tool,lang}=Astro.props;
+const result=tool.evaluate(Object.fromEntries(tool.fields.map(f=>[f.name,f.value])),lang);
+const l=(en:string,ar:string)=>text(en,ar)[lang];
+---
+<div class="tool-workspace" data-tool={tool.slug} data-lang={lang}>
+  <form class="tool-form">
+    <h2>{l('Your inputs','المدخلات')}</h2>
+    <p class="tool-hint">{l('Sample values are filled in. Replace them with your own.','القيم الحالية مثال توضيحي. استبدلها بقيمك.')}</p>
+    <div class="tool-fields">
+      {tool.fields.map(field=><div class:list={['tool-field',{'tool-field-wide':field.type==='textarea'||field.type==='url'}]}>
+        <label for={`field-${field.name}`}>{field.label[lang]}</label>
+        {field.type==='textarea'
+          ? <textarea id={`field-${field.name}`} name={field.name} required={field.required!==false} maxlength={field.maxLength} rows={field.name==='payload'?14:7} dir="ltr" spellcheck="false" aria-describedby={field.hint?`hint-${field.name}`:undefined}>{field.value}</textarea>
+          : field.type==='select'
+            ? <select id={`field-${field.name}`} name={field.name}>{field.options?.map(option=><option value={option.value} selected={option.value===field.value}>{option.label[lang]}</option>)}</select>
+            : <input id={`field-${field.name}`} name={field.name} type={field.type} value={field.value} min={field.min} max={field.max} step={field.type==='number'?(field.step||'any'):undefined} maxlength={field.maxLength} required={field.required!==false} dir="ltr" inputmode={field.type==='number'?'decimal':undefined} aria-describedby={field.hint?`hint-${field.name}`:undefined} />}
+        {field.hint&&<small id={`hint-${field.name}`} class="tool-hint">{field.hint[lang]}</small>}
+      </div>)}
+    </div>
+    <div class="tool-actions"><button type="submit" class="tool-primary">{l('Update results','تحديث النتائج')}</button><button type="reset" class="tool-secondary">{l('Reset example','استعادة المثال')}</button></div>
+    <p class="tool-error" data-error role="alert" hidden></p>
+    <noscript><p>{l('JavaScript is required to calculate your inputs. The results shown are the worked example.','تحتاج إلى JavaScript لحساب مدخلاتك. النتائج المعروضة تخص المثال التوضيحي.')}</p></noscript>
+  </form>
+  <div class="tool-results" aria-labelledby="results-heading">
+    <h2 id="results-heading">{l('Results','النتائج')}</h2>
+    <p class="tool-hint" data-status role="status">{l('Showing the sample results.','تُعرض نتائج المثال التوضيحي.')}</p>
+    <div data-result-body>
+      <dl class="tool-metrics" data-metrics hidden={!result.metrics}>{result.metrics?.map(metric=><div><dt>{metric.label[lang]}</dt><dd dir="auto">{metric.value}</dd></div>)}</dl>
+      <div data-code-wrap hidden={result.code===undefined}>
+        <label for="tool-output">{l('Generated output','الناتج')}</label>
+        <textarea id="tool-output" data-code readonly dir="ltr" rows={tool.slug==='utm-builder'?5:12} spellcheck="false">{result.code}</textarea>
+        <button type="button" class="tool-secondary" data-copy>{l('Copy output','نسخ الناتج')}</button>
+      </div>
+      <p class="tool-hint" data-note hidden={!result.note}>{result.note?.[lang]}</p>
+      <div class="tool-table-scroll" data-table-wrap hidden={!result.rows}>
+        <table class="tool-table"><caption>{l('Payload fields','حقول البيانات')}</caption><thead><tr><th>{l('Path','المسار')}</th><th>{l('Type','النوع')}</th><th>{l('Value','القيمة')}</th></tr></thead><tbody data-rows>{result.rows?.map(row=><tr><td dir="ltr">{row.path}</td><td>{row.type}</td><td dir="ltr">{row.value}</td></tr>)}</tbody></table>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  import {mountTools} from '../../tools/client';
+  mountTools();
+</script>

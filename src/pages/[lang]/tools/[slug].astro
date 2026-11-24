@@ -1,0 +1,52 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ToolForm from '../../../components/tools/ToolForm.astro';
+import '../../../styles/tools.css';
+import {langs,siteData,type Lang} from '../../../lib/content';
+import {tools,copy,categories} from '../../../tools/registry';
+import {guides} from '../../../tools/guides';
+import type {Tool} from '../../../tools/types';
+export function getStaticPaths(){return langs.flatMap(lang=>tools.map(tool=>({params:{lang,slug:tool.slug},props:{tool}})));}
+interface Props {tool:Tool;}
+const lang=Astro.params.lang as Lang;
+const {tool}=Astro.props;
+const {settings,projects,profile}=await siteData();
+const guide=guides[tool.slug];
+if(!guide)throw new Error(`Missing editorial guide: ${tool.slug}`);
+const related=projects.find(project=>project.data.slug===tool.relatedProject);
+const url=new URL(`/${lang}/tools/${tool.slug}/`,settings.domain).href;
+const l=(en:string,ar:string)=>lang==='en'?en:ar;
+const structuredData=[
+  {'@context':'https://schema.org','@type':'WebApplication',name:tool.title[lang],description:tool.description[lang],url,inLanguage:lang,author:{'@type':'Person',name:profile.name[lang],url:new URL(`/${lang}/`,settings.domain).href},applicationCategory:tool.category==='development'?'DeveloperApplication':'BusinessApplication',operatingSystem:'Any',browserRequirements:'Requires JavaScript for interactive results',isAccessibleForFree:true,offers:{'@type':'Offer',price:'0',priceCurrency:'SAR'}},
+  {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[
+    {'@type':'ListItem',position:1,name:l('Home','الرئيسية'),item:new URL(`/${lang}/`,settings.domain).href},
+    {'@type':'ListItem',position:2,name:copy.title[lang],item:new URL(`/${lang}/tools/`,settings.domain).href},
+    {'@type':'ListItem',position:3,name:tool.title[lang],item:url},
+  ]},
+];
+---
+<Base lang={lang} title={tool.title[lang]} description={tool.description[lang]}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g,'\u003c')}/>
+  <main class="page tools-page" id="content">
+    <nav class="tool-breadcrumb" aria-label={l('Breadcrumb','مسار التنقل')}><a href={`/${lang}/`}>{l('Home','الرئيسية')}</a><span aria-hidden="true">/</span><a href={`/${lang}/tools/`}>{copy.title[lang]}</a></nav>
+    <p class="eyebrow">{categories[tool.category][lang]}</p>
+    <h1>{tool.title[lang]}</h1>
+    <p class="page-lead">{tool.intro[lang]}</p>
+    <p class="tool-privacy">{copy.privacy[lang]}</p>
+    <ToolForm tool={tool} lang={lang}/>
+    <div class="tool-guide">
+      <section><h2>{l('How to use this tool','كيفية استخدام الأداة')}</h2><ol class="tool-steps">{guide.steps.map(step=><li>{step[lang]}</li>)}</ol></section>
+      <section><h2>{l('How it works','كيف تعمل الأداة')}</h2><p>{tool.method[lang]}</p></section>
+      <section><h2>{l('Worked example','مثال تطبيقي')}</h2><p>{tool.example[lang]}</p></section>
+      <section><h2>{l('How to interpret the results','كيف تفسّر النتائج؟')}</h2><p>{guide.interpretation[lang]}</p></section>
+      <section><h2>{l('Common mistakes to avoid','أخطاء شائعة تجنّبها')}</h2><ul class="tool-steps">{guide.mistakes.map(item=><li>{item[lang]}</li>)}</ul></section>
+      <section><h2>{l('Assumptions & limitations','الافتراضات والحدود')}</h2><p>{tool.limitations[lang]}</p>
+      </section>
+      <section><h2>{l('Frequently asked questions','أسئلة شائعة')}</h2>{guide.questions.map(item=><details class="tool-faq"><summary>{item.question[lang]}</summary><p>{item.answer[lang]}</p></details>)}</section>
+      {guide.sources&&<section><h2>{l('References','المراجع')}</h2><ul class="tool-steps">{guide.sources.map(source=><li><a class="text-link" href={source.url}>{source.label[lang]}</a></li>)}</ul></section>}
+      {related&&<section><h2>{l('Related work','مشروع ذو صلة')}</h2><p>{related.data.summary[lang]}</p><a class="text-link" href={`/${lang}/projects/${related.data.slug}/`}>{related.data.title[lang]}</a></section>}
+      <section class="tool-contact"><h2>{l('Need help applying this to your product?','تحتاج إلى تطبيق ذلك في مشروعك؟')}</h2><p>{l('Get in touch about analytics implementation, workflow automation or product development.','تواصل معي لمناقشة إعداد التحليلات أو أتمتة مسارات العمل أو تطوير المنتجات الرقمية.')}</p><a class="text-link" href={`mailto:${profile.email}`}>{l('Discuss your project','ناقش مشروعك معي')}</a></section>
+    </div>
+    <nav class="tool-more" aria-label={l('More useful tools','المزيد من الأدوات')}><h2>{l('Explore more tools','اكتشف أدوات أخرى')}</h2><ul>{tools.filter(item=>item.slug!==tool.slug).map(item=><li><a href={`/${lang}/tools/${item.slug}/`}>{item.title[lang]}</a></li>)}</ul></nav>
+  </main>
+</Base>

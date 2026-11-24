@@ -50,6 +50,7 @@ const { profile: p, projects, experience, certifications } = await siteData();
       </div>
       <div class="social">
         {p.github && <a href={p.github}>GitHub</a>}
+          {p.x && <a href={p.x}>X</a>}
         {p.linkedin && <a href={p.linkedin}>LinkedIn</a>}
         <a href={`mailto:${p.email}`}>{lang === "en" ? "Email" : "البريد"}</a>
         {p.cv && (
@@ -166,6 +167,7 @@ const { profile: p, projects, experience, certifications } = await siteData();
         <div class="social mt-6">
           {p.linkedin && <a href={p.linkedin}>LinkedIn</a>}
           {p.github && <a href={p.github}>GitHub</a>}
+          {p.x && <a href={p.x}>X</a>}
           {p.cv && (
             <a href={p.cv} download>
               {t.cv}

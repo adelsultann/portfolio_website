@@ -140,6 +140,10 @@ p {
   align-items: center;
   gap: 28px;
 }
+.toplinks a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
+}
 .language {
   border: 1px solid #3d5468;
   padding: 5px 14px;
@@ -175,6 +179,7 @@ p {
   max-width: 380px;
   line-height: 1.6;
   margin: 25px 0 20px;
+  
 }
 .intro-copy {
   max-width: 380px;
@@ -198,7 +203,9 @@ p {
   margin: 42px 0;
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 15px;
+  
+  
 }
 .nav a {
   display: flex;
@@ -209,6 +216,8 @@ p {
   text-transform: uppercase;
   font-weight: 600;
   color: #a9bace;
+  color: var(--bright);
+  color: var(--color-teal);
 }
 .nav a::before {
   content: "";
@@ -220,6 +229,7 @@ p {
 .nav a:hover,
 .nav a[aria-current] {
   color: var(--bright);
+  --color-teal: var(--accent);
 }
 .nav a:hover::before,
 .nav a[aria-current]::before {
@@ -640,9 +650,12 @@ body:has(.page) .topbar {
   }
   .topbar {
     padding: 22px 0;
+    flex-wrap: wrap;
+    gap: 16px;
   }
   .toplinks {
-    gap: 18px;
+    gap: 12px 18px;
+    flex-wrap: wrap;
   }
   .toplinks .cv-top {
     display: none;

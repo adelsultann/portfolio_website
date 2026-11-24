@@ -159,6 +159,13 @@
               "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
             },
             {
+              "name": "x",
+              "label": "X profile URL",
+              "widget": "string",
+              "required": false,
+              "hint": "Optional. Use a verified HTTPS URL. Leave blank if unavailable."
+            },
+            {
               "name": "cv",
               "label": "Public CV",
               "widget": "file",
