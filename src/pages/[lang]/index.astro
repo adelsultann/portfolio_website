@@ -27,6 +27,11 @@ const { profile: p, projects, experience, certifications } = await siteData();
         <h1>{p.name[lang]}</h1>
         <p class="location">{p.location[lang]}</p>
         <p class="hero-intro">{p.intro[lang]}</p>
+        <div class="social hero-social">
+          {p.github && <a href={p.github}>GitHub</a>}
+          {p.linkedin && <a href={p.linkedin}>LinkedIn</a>}
+          {p.x && <a href={p.x}>X</a>}
+        </div>
         <div class="hero-actions">
           <a class="primary-link" href="#projects">{lang === "en" ? "View projects" : "استعرض المشاريع"}</a>
           <a href="#contact">{lang === "en" ? "Get in touch" : "تواصل معي"}</a>

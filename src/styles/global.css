@@ -852,3 +852,5 @@ body { background: var(--bg); }
   .footer { align-items: center; }
   .footer .social { margin: 0; }
 }
+
+.hero-social a { display: inline-flex; align-items: center; min-height: 44px; }
