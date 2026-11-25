@@ -9,7 +9,7 @@ const read=p=>readFile(join(dist,p),'utf8');
 const projects=await Promise.all((await readdir('src/content/projects')).filter(x=>x.endsWith('.json')).map(async f=>JSON.parse(await readFile(join('src/content/projects',f),'utf8'))));
 for(const lang of ['en','ar']){
  const home=await read(`${lang}/index.html`);assert(home.includes(`lang="${lang}"`));assert(home.includes(`dir="${lang==='ar'?'rtl':'ltr'}"`));
- const order=['projects','experience','about','certifications','contact'].map(s=>home.indexOf(`id="${s}"`));assert(order.every(x=>x>=0));assert(order.every((x,i)=>!i||x>order[i-1]),'Homepage section order');
+ const order=['about','projects','experience','certifications','contact'].map(s=>home.indexOf(`id="${s}"`));assert(order.every(x=>x>=0));assert(order.every((x,i)=>!i||x>order[i-1]),'Homepage section order');
  for(const p of projects){const exists=files.some(f=>f===join(dist,lang,'projects',p.slug,'index.html'));assert.equal(exists,p.status==='published',`Draft route exclusion: ${p.slug}`);}
  const archive=await read(`${lang}/projects/index.html`);assert(archive.includes('data-filter="all"'));
 }

@@ -8,7 +8,7 @@
     "ar": "جُملة منصة تعليمية تفاعلية لتعلّم اللغة الإنجليزية من خلال مواقف الحياة اليومية. تجمع بين الاستماع والكتابة والتمارين التطبيقية، مع نظام لتتبع التقدم وتحفيز الاستمرارية، وتجربة تدعم العربية والإنجليزية.",
     "en": "Jumla is an interactive English-learning platform built around practical everyday situations. It combines listening, writing, and applied exercises with progress tracking, learning streaks, and a bilingual Arabic-English experience."
   },
-  "slug": "jumla",
+  "slug": "jumla-project",
   "order": 100,
   "contribution": {
     "ar": "تولّيت تصميم وتطوير المنتج بالكامل كمشروع شخصي، بدءًا من دراسة احتياجات المستخدمين وتحديد تجربة التعلم، وصولًا إلى تطوير التطبيق وقاعدة البيانات ونظام إدارة المحتوى. كما نفذت المصادقة، وتتبع تقدم المتعلمين، والتحليلات السلوكية، وأتمتة النشر، وإدارة بيئات التطوير والإنتاج.",
@@ -23,7 +23,8 @@
     "ar": "Full-Stack Development: بناء التطبيق باستخدام Next.js وTypeScript وSupabase مع PostgreSQL لإدارة البيانات.\n\nLearning Experience: تطوير دروس تفاعلية تجمع بين الاستماع والكتابة والتمارين، مع تتبع الإنجاز والأيام المتتالية.\n\nAuthentication & Security: تنفيذ نظام تسجيل دخول باستخدام رمز OTP من 6 أرقام، مع حماية بيانات المستخدمين وسجلات تقدمهم.\n\nContent Management: بناء آلية لإعداد الدروس ونشرها وإدارة نسخها دون التأثير على تقدم المتعلمين الحاليين.\n\nAnalytics & Tracking: دمج GA4 وGoogle Tag Manager وPostHog لقياس التسجيل والدخول وبدء الدروس وإكمال التمارين والدروس.\n\nDevOps & Infrastructure: إعداد بيئات تطوير وتجريب وإنتاج مستقلة باستخدام Docker وVPS وGitHub Container Registry.\n\nReliability & Performance: تنفيذ نسخ احتياطية مشفرة، واختبارات استعادة البيانات، ومراقبة صحة الخدمات، واختبارات تحميل باستخدام k6.\n\nSEO & Localization: دعم العربية والإنجليزية مع RTL/LTR، وإعداد Sitemap وفهرسة صفحات المستويات لمحركات البحث.",
     "en": "Full-Stack Development: Built the application using Next.js, TypeScript, Supabase, and PostgreSQL.\n\nInteractive Learning: Developed listening, writing, and practice exercises with persistent lesson progress and learning streaks.\n\nAuthentication & Security: Implemented six-digit OTP authentication and protected user progress and private learning records.\n\nContent Management: Designed structured lesson authoring and publishing workflows with version-aware content handling to preserve existing learner progress.\n\nProduct Analytics: Integrated GA4, Google Tag Manager, and PostHog to track sign-ups, logins, lesson starts, exercise completions, and lesson completions.\n\nDevOps & Infrastructure: Established isolated development, staging, and production environments using Docker, VPS hosting, and GitHub Container Registry.\n\nReliability & Performance: Implemented encrypted database backups, recovery verification, health monitoring, and k6 load testing.\n\nSEO & Localization: Built bilingual Arabic-English interfaces with RTL/LTR support, structured URLs, and XML sitemaps."
   },
-  "status": "draft",
+  "status": "published",
+  "tags": ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Docker"],
   "role": {
     "en": "Full-Stack Product Developer",
     "ar": "Full-Stack Product Developer"

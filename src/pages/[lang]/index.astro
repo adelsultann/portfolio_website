@@ -1,5 +1,4 @@
 ---
-import {imageInfo} from '../../lib/media';
 import {rolePoints} from "../../lib/experience";
 import Base from "../../layouts/Base.astro";
 import ProjectRow from "../../components/ProjectRow.astro";
@@ -23,7 +22,7 @@ const { profile: p, projects, experience, certifications } = await siteData();
   <main id="content" class="portfolio">
     <section class="portfolio-hero">
       <div class="hero-copy">
-        <p class="eyebrow">{lang === "en" ? "Product Engineer" : "مطور منتجات رقمية"}</p>
+        <p class="eyebrow">{lang === "en" ? "Product Developer" : "مطور منتجات رقمية"}</p>
         <h1>{p.name[lang]}</h1>
         <p class="location">{p.location[lang]}</p>
         <p class="hero-intro">{p.intro[lang]}</p>
@@ -37,12 +36,21 @@ const { profile: p, projects, experience, certifications } = await siteData();
           <a href="#contact">{lang === "en" ? "Get in touch" : "تواصل معي"}</a>
         </div>
       </div>
-      {projects[0] && <figure class="hero-work">
-        <a href={`/${lang}/projects/${projects[0].data.slug}/`}>
-          <img src={projects[0].data.cover} alt="" width={imageInfo(projects[0].data.cover).width} height={imageInfo(projects[0].data.cover).height} srcset={imageInfo(projects[0].data.cover).srcset || undefined} sizes="(max-width:760px) 90vw, 48vw" fetchpriority="high"/>
-          <span>{projects[0].data.title[lang]}</span>
-        </a>
-      </figure>}
+      <section id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">
+          {t.about}
+        </h2>
+        <p>{p.headline[lang]}</p>
+        <p class="about-copy">{p.about[lang]}</p>
+        <div class="skills">
+          {p.skills.map((skill) => (
+            <div>
+              <h3 >{skill.title[lang]}</h3>
+              <p>{skill.items.join(" · ")}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </section>
       <section id="projects" aria-labelledby="projects-title">
         <h2 class="section-title" id="projects-title">
@@ -95,21 +103,6 @@ const { profile: p, projects, experience, certifications } = await siteData();
             })}
           </article>
         ))}
-      </section>
-      <section id="about" aria-labelledby="about-title">
-        <h2 class="section-title" id="about-title">
-          {t.about}
-        </h2>
-        <p>{p.headline[lang]}</p>
-        <p class="about-copy">{p.about[lang]}</p>
-        <div class="skills">
-          {p.skills.map((skill) => (
-            <div>
-              <h3 >{skill.title[lang]}</h3>
-              <p>{skill.items.join(" · ")}</p>
-            </div>
-          ))}
-        </div>
       </section>
       <section id="certifications" aria-labelledby="cert-title">
         <h2 class="section-title" id="cert-title">
