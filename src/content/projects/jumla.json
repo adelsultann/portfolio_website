@@ -1,0 +1,46 @@
+{
+  "outcomes": {
+    "ar": "إطلاق منصة تعليمية متكاملة ومتاحة للاستخدام عبر الويب.\n\nتطوير نظام تعلّم يحفظ تقدم المستخدم ويتيح استكمال الدروس.\n\nبناء نظام لإدارة المحتوى ونشر الدروس بصورة منظمة دون فقدان التقدم السابق.\n\nتجهيز ثلاث بيئات مستقلة للتطوير والتجريب والإنتاج، مع آليات للنسخ الاحتياطي والاستعادة.\n\nاجتياز اختبار تحميل تجريبي يحاكي 50 مستخدمًا خلال 60 ثانية، بمتوسط زمن استجابة 390ms وزمن استجابة عند الشريحة 95 بلغ 1.02s.\n\nتطبيق نظام تحليلات لتتبع رحلة المتعلم من التسجيل وحتى إكمال الدروس، تمهيدًا لقياس التفاعل وتحسين تجربة التعلم.",
+    "en": "Launched a functional English-learning platform accessible through the web.\n\nDelivered an interactive learning experience with persistent progress tracking.\n\nBuilt a structured content publishing system designed to preserve existing learner progress.\n\nEstablished separate development, staging, and production environments with backup and recovery procedures.\n\nCompleted a load test simulating 50 users over 60 seconds, achieving 390ms average response time and 1.02s p95 latency.\n\nImplemented event-based product analytics to measure the learner journey and support future retention and engagement improvements."
+  },
+  "liveUrl": "https://jumla.cc",
+  "summary": {
+    "ar": "جُملة منصة تعليمية تفاعلية لتعلّم اللغة الإنجليزية من خلال مواقف الحياة اليومية. تجمع بين الاستماع والكتابة والتمارين التطبيقية، مع نظام لتتبع التقدم وتحفيز الاستمرارية، وتجربة تدعم العربية والإنجليزية.",
+    "en": "Jumla is an interactive English-learning platform built around practical everyday situations. It combines listening, writing, and applied exercises with progress tracking, learning streaks, and a bilingual Arabic-English experience."
+  },
+  "slug": "jumla",
+  "order": 100,
+  "contribution": {
+    "ar": "تولّيت تصميم وتطوير المنتج بالكامل كمشروع شخصي، بدءًا من دراسة احتياجات المستخدمين وتحديد تجربة التعلم، وصولًا إلى تطوير التطبيق وقاعدة البيانات ونظام إدارة المحتوى. كما نفذت المصادقة، وتتبع تقدم المتعلمين، والتحليلات السلوكية، وأتمتة النشر، وإدارة بيئات التطوير والإنتاج.",
+    "en": "Independently designed, developed, and deployed the end-to-end product. Led product planning, learning experience design, full-stack development, database architecture, content management, authentication, analytics, and production infrastructure."
+  },
+  "coverAlt": {
+    "en": "Jumla-profile",
+    "ar": "Jumla-profile"
+  },
+  "gallery": [],
+  "implementation": {
+    "ar": "Full-Stack Development: بناء التطبيق باستخدام Next.js وTypeScript وSupabase مع PostgreSQL لإدارة البيانات.\n\nLearning Experience: تطوير دروس تفاعلية تجمع بين الاستماع والكتابة والتمارين، مع تتبع الإنجاز والأيام المتتالية.\n\nAuthentication & Security: تنفيذ نظام تسجيل دخول باستخدام رمز OTP من 6 أرقام، مع حماية بيانات المستخدمين وسجلات تقدمهم.\n\nContent Management: بناء آلية لإعداد الدروس ونشرها وإدارة نسخها دون التأثير على تقدم المتعلمين الحاليين.\n\nAnalytics & Tracking: دمج GA4 وGoogle Tag Manager وPostHog لقياس التسجيل والدخول وبدء الدروس وإكمال التمارين والدروس.\n\nDevOps & Infrastructure: إعداد بيئات تطوير وتجريب وإنتاج مستقلة باستخدام Docker وVPS وGitHub Container Registry.\n\nReliability & Performance: تنفيذ نسخ احتياطية مشفرة، واختبارات استعادة البيانات، ومراقبة صحة الخدمات، واختبارات تحميل باستخدام k6.\n\nSEO & Localization: دعم العربية والإنجليزية مع RTL/LTR، وإعداد Sitemap وفهرسة صفحات المستويات لمحركات البحث.",
+    "en": "Full-Stack Development: Built the application using Next.js, TypeScript, Supabase, and PostgreSQL.\n\nInteractive Learning: Developed listening, writing, and practice exercises with persistent lesson progress and learning streaks.\n\nAuthentication & Security: Implemented six-digit OTP authentication and protected user progress and private learning records.\n\nContent Management: Designed structured lesson authoring and publishing workflows with version-aware content handling to preserve existing learner progress.\n\nProduct Analytics: Integrated GA4, Google Tag Manager, and PostHog to track sign-ups, logins, lesson starts, exercise completions, and lesson completions.\n\nDevOps & Infrastructure: Established isolated development, staging, and production environments using Docker, VPS hosting, and GitHub Container Registry.\n\nReliability & Performance: Implemented encrypted database backups, recovery verification, health monitoring, and k6 load testing.\n\nSEO & Localization: Built bilingual Arabic-English interfaces with RTL/LTR support, structured URLs, and XML sitemaps."
+  },
+  "status": "draft",
+  "role": {
+    "en": "Full-Stack Product Developer",
+    "ar": "Full-Stack Product Developer"
+  },
+  "cover": "/media/uploads/screenshot-2026-11-25-120846.png",
+  "title": {
+    "ar": "جملة| منصة تفاعلية لتعلّم الإنجليزية",
+    "en": "Jumla | Interactive English Learning Platform"
+  },
+  "solution": {
+    "ar": "تطوير منصة تعلّم تفاعلية تقسم المحتوى إلى دروس قصيرة بمستويات مختلفة، وتتيح للمستخدم الاستماع إلى الجمل وكتابتها ثم تطبيق ما تعلمه من خلال تمارين عملية. تدعم المنصة تتبع التقدم والأيام المتتالية للتعلم (Streaks)، مع تجربة استخدام متعددة اللغات.",
+    "en": "Built an interactive learning platform offering short, structured lessons across different proficiency levels. Learners listen to sentences, practice writing them, and reinforce their understanding through exercises. The platform includes progress tracking, learning streaks, and multilingual support."
+  },
+  "category": "products",
+  "engagement": "personal product",
+  "problem": {
+    "ar": "تعتمد كثير من وسائل تعلّم الإنجليزية على الحفظ والمحتوى النظري، مما يصعّب تطبيق اللغة في المواقف اليومية. كما أن طول الدروس وضعف التفاعل قد يؤثران على استمرارية المتعلم وقدرته على قياس تقدمه.",
+    "en": "Traditional English-learning approaches often emphasize memorization and theory over practical application. Long lessons and limited interaction can make it difficult for learners to stay consistent, practice everyday communication, and measure their progress."
+  }
+}
